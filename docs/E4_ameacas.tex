@@ -1,0 +1,10 @@
+\section{Ameaças à Validade}
+\emph{Vazamentos residuais.} A paridade é por construção, mas não total. (i) A lista de ações traz o id e uma descrição curta de cada botão; a pessoa vê só o rótulo. A descrição é metalinguística e não cita a tarefa, mas é mais explícita que o botão. (ii) A instrução do cartão diz quais campos preencher, o que a pessoa também lê. (iii) A memória do agente é o resumo literal das próprias ações e respostas $d{:}$, mais fiel que a memória humana. (iv) O nome do campo (por exemplo, ``Prazo'') orienta a busca para os dois receptores igualmente.
+
+\emph{Mecanismos.} As direções de R1, R2 e R5 têm fonte; as magnitudes, a hesitação e o limite de tentativas são hipóteses operacionais sem estimativa publicada. Os filtros de \emph{affordance} retiram botões por um passo para o agente, enquanto a pessoa vê todos; esse desvio é intencional e registrado, mas não equivale a um modelo cognitivo.
+
+\emph{LLM.} Com temperatura 0 e mesma observação, o modelo responde de forma quase determinística; a variação entre execuções vem quase toda dos sorteios do controlador, o que concentra a dispersão no comparador. O \cod{seed} da API é de melhor esforço e o \cod{system\_fingerprint} pode mudar. O modelo pode ter visto textos parecidos no treino.
+
+\emph{KLM e tempo.} O KLM não tem operador de leitura, então a linha de base subestima tarefas com texto longo; a regra de um $M$ por fala é uma heurística. O tempo simulado não é tempo humano e não deve ser comparado com estudos com pessoas.
+
+\emph{Escopo.} O piloto usa só C1 e C2 e não estima desempenho humano. V1 e V2 continuam intocadas para a validação.

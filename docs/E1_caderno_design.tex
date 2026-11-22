@@ -1,0 +1,258 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\AtBeginDocument{\shorthandoff{"}}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.misc,calc}
+\usepackage{hyperref}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\cod}[1]{{\ttfamily\small\def\_{\textunderscore\allowbreak}#1}}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\parskip}{3pt}
+
+\title{Anexo E1 — Caderno de Especificação de Design do UX-Agent\\\large Chat de estudo para estudantes universitários autistas (roteiro-0.2)}
+\author{Matheus Emanuel da Silva \and João Francisco Teles da Silva \and Eduardo Almeida\\CEFET-MG, Campus Divinópolis — Interação Humano-Computador}
+\date{Novembro de 2026}
+
+\begin{document}
+\maketitle
+
+\noindent Este caderno especifica o Projeto de Interação (Parte I) que a implementação (Parte II) realiza. Cada artefato cita o identificador usado no código e no log, para que a rastreabilidade entre design, código e registros possa ser conferida. A persona, as tarefas C1, C2, V1 e V2 e a HTA vêm da modelagem congelada; V1 e V2 aparecem aqui só como especificação, nunca foram executadas.
+
+\tableofcontents
+
+\section{Metamensagem}
+A interface realiza a metamensagem do designer para dois receptores ao mesmo tempo: a pessoa estudante e o agente proxy que a substitui no piloto.
+
+\begin{quote}\itshape
+``Entendo que você é estudante universitária, usa web e chat com frequência, estuda sozinha e quer saber exatamente o que, quando e em que formato entregar, sem ter de perguntar a um colega e sem ser tratada como incapaz. Entendo também que respostas de chat podem trazer metáfora, ironia ou instrução implícita, e que você pode querer conferir o sentido antes de agir. Por isso, este chat mostra a tarefa num cartão fixo, guarda tudo no histórico, avisa quando a mensagem continua, deixa você pedir uma explicação em lista quando quiser, oferece ajuda sobre como fazer e como corrigir, aceita correções de campo sem punição e pergunta antes de encerrar com campo vazio. Você decide quando terminou; quem confere o resultado é um verificador externo, não o próprio chat.''
+\end{quote}
+
+Para o agente, a mesma metamensagem é entregue pela observação $o_t$: ele recebe os mesmos signos, na mesma ordem, e nenhum signo a mais. A tabela de paridade (Seção~\ref{sec:paridade}) mostra como cada signo chega a cada receptor.
+
+\section{Tabela de paridade de signos}\label{sec:paridade}
+Tipos de signo segundo a Engenharia Semiótica: \emph{estático} (não muda durante a cena), \emph{dinâmico} (muda com a interação) e \emph{metalinguístico} (fala sobre a própria interface). O tradutor é \cod{uxagent/observacao.py}; a tela humana é \cod{uxagent/web.py}; ambos leem a mesma função \cod{EstadoInterface.tela()}.
+
+\begin{longtable}{@{}P{2.6cm}P{1.6cm}P{3.6cm}P{4.2cm}P{3.6cm}@{}}
+\toprule
+Signo & Tipo & Tela humana & Observação $o_t$ (agente) & Vazamento evitado\\
+\midrule\endhead
+Título ``Chat de estudo'' & estático & cabeçalho & \cod{TELA: Chat de estudo} & --\\
+Cartão da tarefa & estático & caixa fixa no topo & \cod{CARTÃO DA TAREFA: \ldots} (texto idêntico) & instrução escrita a partir do objetivo, sem o caminho da solução\\
+Rótulos dos campos & estático & rótulo de cada campo & nomes em \cod{CAMPOS DE RESPOSTA} e no \cod{enum} de \cod{campo} & só os campos da tarefa; sem formato esperado\\
+Valor dos campos & dinâmico & caixa de texto preenchida & \cod{Local: "\ldots"} ou \cod{(vazio)} & sem marca de certo/errado\\
+Mensagens do chat & dinâmico & balões no histórico & \cod{[Chat] \ldots} na mesma ordem & sem rótulo de figura (metáfora, ironia, implícita)\\
+Indicador de continuação & dinâmico & ``A mensagem continua abaixo'' & mesma frase, só quando há bloco oculto & não revela o conteúdo do bloco B\\
+Mensagens do sistema & dinâmico & linha cinza (preenchido, substituído) e aviso (recusado, confirmação) & \cod{[Sistema] \ldots} e \cod{AVISO DO SISTEMA} & não avalia o conteúdo enviado\\
+Contador de ações & dinâmico & ``Ações restantes: n de 12'' & \cod{AÇÕES RESTANTES: n de 12} & --\\
+Alerta de poucas ações (AL) & dinâmico & contador em destaque & ``(atenção: restam poucas ações)'' & --\\
+Botões & estático por cena & botões visíveis na cena & lista \cod{AÇÕES DISPONÍVEIS AGORA} com id e rótulo & só as falas $u{:}$ habilitadas pela MoLIC\\
+Descrição dos botões & metalinguístico & rótulo do botão & frase curta após o rótulo & não diz quando usar\\
+Texto de ajuda & metalinguístico & painel de ajuda & \cod{JANELA DE AJUDA ABERTA} (texto idêntico) & explica a interface, não a tarefa\\
+Reformulação & dinâmico & nova mensagem do chat em lista & \cod{[Chat] \ldots} (idêntica) & só aparece depois de \cod{reformular}\\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Signos e dados que não existem em nenhum dos receptores}}\\
+\midrule
+Rótulo de figura, texto superficial & -- & ausente & ausente; usado só pelo controlador & R1 lê \cod{figura} no roteiro, fora do prompt\\
+Chave de sucesso, resposta canônica & -- & ausente & ausente & em \cod{analista/gabaritos.json}, nunca importado por \cod{uxagent/agente.py}\\
+HTA, CTT, KLM, caminho mínimo & -- & ausente & ausente & instrumentos do analista\\
+Parâmetros sorteados ($\theta$) & -- & ausente & ausente & gravados no log, não no prompt\\
+\bottomrule
+\end{longtable}
+
+\paragraph{Desvios declarados.} Dois mecanismos de perfil alteram só $o_t$ e são registrados como \cod{restricao\_aplicada}: (i) o filtro de leitura (R1) troca o texto integral de um bloco com figura pelo superficial; (ii) os filtros de \emph{affordance} (R2, R3, R4 e limite de tentativas) retiram falas da lista por um passo. A pessoa sempre vê a tela integral. O agente recebe ainda a lista das próprias ações anteriores na tarefa, equivalente à memória de curto prazo que a pessoa teria; o contexto é reiniciado entre tarefas.
+
+\section{Refinamento das tarefas em CTT}
+Operadores (Dix et al.): $\gg$ habilitação; $[]$ escolha; $|\!=\!|$ independência de ordem; $[\!>$ desativação; $|\!>$ suspensão e retomada; $^{*}$ iteração; $[T]$ opcional. Tipos: abstrata (A), do usuário/cognitiva (U), de interação (I), da aplicação (S). A CTT é leitura do analista e não é fornecida ao agente.
+
+\subsection{Estrutura comum}
+\begin{align*}
+\text{Tarefa}_X &:= \big(\text{Entender} \gg \text{ObterInfo} \gg \text{Registrar} \gg \text{Concluir}\big)\ [\!>\ \text{Interrupção}_S\\
+\text{Tarefa}_X &\ |\!>\ \text{Ajuda}\\
+\text{Ajuda} &:= (\text{AbrirComoFazer}_I\ []\ \text{AbrirComoCorrigir}_I) \gg \text{LerAjuda}_U \gg \text{Voltar}_I\\
+\text{Entender} &:= \text{LerCartão}_U \gg \text{DecidirOQueProcurar}_U\\
+\text{Concluir} &:= \text{Conferir}_U \gg \text{Encerrar}_I \gg [\text{Confirmação}]\\
+\text{Confirmação} &:= \text{PedeConfirmação}_S \gg (\text{Confirmar}_I\ []\ \text{Cancelar}_I)\\
+\text{Interrupção}_S &:= \text{limite de 12 ações}\ []\ \text{falha técnica}
+\end{align*}
+
+\subsection{Por tarefa}
+\begin{tabularx}{\textwidth}{@{}P{1.2cm}LP{1.6cm}@{}}
+\toprule
+Tarefa & ObterInfo e Registrar & Conjunto\\
+\midrule
+C1 & ObterInfo $:=$ LerFala$_U$ $\gg$ ([NovaPergunta$_I$] $[]$ [Reformular$_I$])$^{*}$ \newline Registrar $:=$ EnviarLocal$_I$ $|\!=\!|$ EnviarHorário$_I$ & calibração\\
+C2 & ObterInfo $:=$ LerBlocoA$_U$ $\gg$ Rolar$_I$ $\gg$ LerBlocoB$_U$ $\gg$ InterpretarFiguras$_U$ $\gg$ ([Reformular$_I$] $[]$ [NovaPergunta$_I$])$^{*}$ \newline Registrar $:=$ EnviarEntrega$_I$ $|\!=\!|$ EnviarPrazo$_I$ & calibração\\
+V1 & ObterInfo $:=$ LerBlocoA$_U$ $\gg$ Rolar$_I$ $\gg$ LerBlocoB$_U$ $\gg$ ([Reformular$_I$] $[]$ [NovaPergunta$_I$])$^{*}$ \newline Registrar $:=$ EnviarLocal$_I$ $|\!=\!|$ EnviarPrazo$_I$ & validação (congelada)\\
+V2 & ObterInfo $:=$ LerBlocoA$_U$ $\gg$ Rolar$_I$ $\gg$ LerBlocoB$_U$ $\gg$ InferirPrazo$_U$ $\gg$ ([Reformular$_I$] $[]$ [NovaPergunta$_I$])$^{*}$ \newline Registrar $:=$ EnviarPrazo$_I$ $|\!=\!|$ EnviarFormato$_I$ & validação (congelada)\\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize, every node/.style={draw, rounded corners=2pt, align=center, inner sep=2pt}, level distance=14mm,
+  level 1/.style={sibling distance=43mm}, level 2/.style={sibling distance=15mm}, edge from parent/.style={draw,-}]
+\node (r) {Tarefa C2 (A)}
+  child {node (e) {Entender (A)}
+    child {node {Ler\\cartão\\(U)}}
+    child {node {Decidir\\(U)}}}
+  child {node (o) {ObterInfo (A)}
+    child {node {Ler A\\(U)}}
+    child {node {Rolar\\(I)}}
+    child {node {[Reform.]*\\(I)}}}
+  child {node (g) {Registrar (A)}
+    child {node {Entrega\\(I)}}
+    child {node {Prazo\\(I)}}}
+  child {node (c) {Concluir (A)}
+    child {node {Conferir\\(U)}}
+    child {node {Encerrar\\(I)}}};
+\path (e) -- node[draw=none, fill=white]{$\gg$} (o);
+\path (o) -- node[draw=none, fill=white]{$\gg$} (g);
+\path (g) -- node[draw=none, fill=white]{$\gg$} (c);
+\path (g-1) -- node[draw=none, fill=white]{$|\!=\!|$} (g-2);
+\node[draw=none] at (0,-4.1) {Raiz: $(\ldots)\ [\!>\ \text{Interrupção}_S$ \quad e \quad $(\ldots)\ |\!>\ \text{Ajuda}$};
+\end{tikzpicture}
+\end{center}
+
+\section{Linha de base GOMS/KLM de especialista}
+Cena principal (\cod{conversa}), método do especialista sem ajuda, igual ao caminho mínimo da HTA. Operadores e tempos de Card, Moran e Newell: $K=0{,}28$\,s (digitador médio), $P=1{,}10$\,s, $B=0{,}10$\,s, $H=0{,}40$\,s, $M=1{,}35$\,s. Regra de colocação de $M$: um $M$ antes de cada fala $u{:}$. Clique em botão $= M\,P\,B$; envio de campo $= M\,P\,B\,H\,K^{n}\,H\,P\,B$, com $n$ igual ao comprimento da resposta canônica. Leitura do texto não tem operador no KLM e fica fora da linha de base (ameaça declarada no artigo). Gerado por \cod{python -m analista.klm}.
+
+\begin{tabularx}{\textwidth}{@{}P{1cm}P{1.2cm}LP{1.5cm}@{}}
+\toprule
+Tarefa & $A_{\min}$ & Sequência de operadores & $T_{\text{KLM}}$\\
+\midrule
+C1 & 3 & enviar Local ($MPBHK^{13}HPB$ = 8,19\,s) $\gg$ enviar Horário ($MPBHK^{9}HPB$ = 7,07\,s) $\gg$ encerrar ($MPB$ = 2,55\,s) & 17,81\,s\\
+C2 & 4 & rolar ($MPB$ = 2,55) $\gg$ enviar Entrega ($MPBHK^{38}HPB$ = 15,19) $\gg$ enviar Prazo ($K^{9}$, 7,07) $\gg$ encerrar (2,55) & 27,36\,s\\
+V1 & 4 & rolar (2,55) $\gg$ enviar Local ($K^{16}$, 9,03) $\gg$ enviar Prazo ($K^{9}$, 7,07) $\gg$ encerrar (2,55) & 21,20\,s\\
+V2 & 4 & rolar (2,55) $\gg$ enviar Prazo ($K^{12}$, 7,91) $\gg$ enviar Formato ($K^{9}$, 7,07) $\gg$ encerrar (2,55) & 20,08\,s\\
+\bottomrule
+\end{tabularx}
+
+\medskip
+O tempo simulado do agente usa a mesma regra de operadores para cada fala executada e soma a hesitação sorteada pelo controlador (\cod{uxagent/tempo.py}). A latência da API do LLM é gravada à parte (\cod{latencia\_llm\_s}) e nunca entra no tempo simulado.
+
+\section{Diagrama MoLIC}
+Papel de usuário único: estudante (representado pela persona E. ou por uma pessoa). Cenas em retângulos arredondados; processamento do sistema em caixas pretas; falas $u{:}$ do usuário e $d{:}$ do preposto nas transições; a ajuda é acesso ubíquo a partir da cena principal. A caixa preta tracejada é a verificação do limite de ações feita pelo sistema após cada fala $u{:}$.
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize, >=Stealth,
+  cena/.style={draw, rounded corners=6pt, align=center, minimum width=36mm, minimum height=15mm, inner sep=3pt},
+  proc/.style={fill=black, minimum width=6mm, minimum height=4mm, inner sep=0},
+  ponto/.style={circle, fill=black, minimum size=3mm, inner sep=0},
+  fim/.style={circle, draw, double, fill=black, minimum size=3mm, inner sep=0}]
+\node[ponto] (ini) at (0,4.3) {};
+\node[cena] (conv) at (0,0) {\textbf{Conversa}\\Tópico: completar a tarefa\\ler cartão; ler histórico;\\preencher campos};
+\node[cena] (aj) at (-7.2,0) {\textbf{Ajuda}\\Tópico: tirar dúvida\\como fazer; como corrigir};
+\node[proc] (p1) at (5.0,2.2) {};
+\node[proc] (p2) at (5.0,-2.4) {};
+\node[cena] (conf) at (5.0,-5.6) {\textbf{Confirmação}\\Tópico: encerrar\\com campo vazio?};
+\node[fim] (fim) at (8.0,-2.4) {};
+\node[proc] (p3) at (-3.6,-3.6) {};
+\draw[->] (ini) -- node[right]{d: mostra cartão e 1ª mensagem} (conv);
+\draw[->] (conv.170) -- node[above, align=center]{u: ajuda\_como\_fazer\\u: ajuda\_corrigir} (aj.10);
+\draw[->] (aj.-10) -- node[below]{u: voltar / d: retoma} (conv.190);
+\draw[->] (conv.20) -- node[above left]{u: enviar} (p1);
+\draw[->] (p1) |- node[pos=0.25, right, align=left]{d: campo preenchido\\d: substituído (RA)\\d: recusado (CE)} (conv.5);
+\draw[->] (conv.-100) .. controls +(-0.6,-2.2) and +(-2.4,-0.6) .. node[pos=0.55, below left, align=right]{u: rolar\_historico / d: revela bloco\\u: reformular / d: lista literal\\u: nova\_pergunta / d: fala neutra} (conv.-165);
+\draw[->] (conv.-20) -- node[below left]{u: encerrar} (p2);
+\draw[->] (p2) -- node[right]{d: há campo vazio (PA)} (conf);
+\draw[->] (p2) -- node[above]{d: encerra} (fim);
+\draw[->] (conf.east) -| node[pos=0.75, left, align=right]{u: confirmar\_encerrar\\d: encerra} (fim);
+\draw[->] (conf.west) -| node[pos=0.25, below]{u: cancelar\_encerrar} (1.2,-0.75);
+\draw[->, dashed] (conv.-130) -- (p3);
+\draw[->, dashed] (p3) -- node[below, align=center]{12 ações ou falha técnica\\d: interrompe} (2.0,-3.6) -- (fim.south west);
+\end{tikzpicture}
+\end{center}
+
+\begin{longtable}{@{}P{2.7cm}P{1.8cm}P{3.6cm}P{3.2cm}P{4.2cm}@{}}
+\toprule
+Fala $u{:}$ (id do agente) & Cena & Fala $d{:}$ (id no log) & Evento no log & Mudança de estado da interface\\
+\midrule\endhead
+\cod{enviar}(campo, texto) & conversa & \cod{d\_campo\_preenchido}, \cod{d\_campo\_substituido}, \cod{d\_texto\_vazio\_recusado}, \cod{d\_campo\_inexistente} & \cod{acao\_executada}; \cod{erro\_capturado} & valor do campo; linha no histórico\\
+\cod{rolar\_historico} & conversa & \cod{d\_revela\_bloco} & \cod{acao\_executada} & bloco B visível; some o indicador\\
+\cod{reformular} & conversa & \cod{d\_reformulacao} & \cod{acao\_executada}, \cod{ajuda\_solicitada} (significado) & lista literal no histórico\\
+\cod{nova\_pergunta} & conversa & \cod{d\_fala\_neutra} & \cod{acao\_executada} & fala neutra no histórico\\
+\cod{ajuda\_como\_fazer} & conversa & \cod{d\_abre\_ajuda} & \cod{ajuda\_solicitada} (procedimento) & cena ajuda\\
+\cod{ajuda\_corrigir} & conversa & \cod{d\_abre\_ajuda} & \cod{ajuda\_solicitada} (recuperação) & cena ajuda\\
+\cod{voltar} & ajuda & \cod{d\_fecha\_ajuda} & \cod{acao\_executada} & volta à conversa no mesmo estado\\
+\cod{encerrar} & conversa & \cod{d\_pede\_confirmacao} ou \cod{d\_encerra} & \cod{acao\_executada}; \cod{encerrada} & cena confirmação ou fim\\
+\cod{confirmar\_encerrar} & confirmação & \cod{d\_encerra} & \cod{encerrada} & fim com campo vazio\\
+\cod{cancelar\_encerrar} & confirmação & \cod{d\_fecha\_ajuda} & \cod{acao\_executada} & volta à conversa\\
+(sistema) & qualquer & \cod{d\_alerta\_acoes}, \cod{d\_interrompe} & \cod{alerta\_exibido}, \cod{interrompida} & destaque no contador; fim\\
+\bottomrule
+\end{longtable}
+
+\noindent Implementação: \cod{uxagent/molic.py} define as cenas e \cod{falas\_habilitadas(estado)}; o esquema JSON da resposta do LLM usa essa lista como \cod{enum}, então o agente não consegue escolher uma fala fora da cena.
+
+\section{Matriz de prevenção e recuperação de erros por operação da HTA}
+PP: prevenção passiva (o signo evita o erro); PA: prevenção ativa (o sistema impede ou pede confirmação); AL: prevenção apoiada (alerta antes do erro); RA: recuperação apoiada (o sistema ajuda a desfazer); CE: captura de erro (o sistema detecta e recusa).
+
+\begin{longtable}{@{}P{2.1cm}P{2.6cm}P{2.6cm}P{2.3cm}P{2.6cm}P{2.6cm}@{}}
+\toprule
+Operação HTA & PP & PA & AL & RA & CE\\
+\midrule\endhead
+1.1 Ler cartão & cartão fixo no topo de toda cena & -- & -- & -- & --\\
+2.1 Ler bloco A & histórico persistente & -- & -- & reformular repete em lista & --\\
+2.2 Rolar histórico & indicador ``a mensagem continua''; botão só existe com bloco oculto & -- & -- & -- & --\\
+2.3 Reformular & rótulo ``Explicar/reformular'' & -- & -- & a lista substitui a dúvida & --\\
+2.4 Nova pergunta & -- & -- & -- & fala neutra não apaga nada & --\\
+3.1/4.1 Enviar campo & rótulos dos campos; \cod{enum} de campos & campo inexistente não é aceito & -- & substituir valor mostra o anterior; ajuda ``como corrijo?'' & texto vazio recusado (\cod{erro\_capturado})\\
+5.2 Encerrar & contador visível & confirmação se há campo vazio (\cod{d\_pede\_confirmacao}) & alerta com 3 ações restantes (\cod{alerta\_exibido}) & ``Voltar e completar'' & --\\
+Qualquer (agente) & lista de falas habilitadas & proposta fora da lista rejeitada & -- & -- & \cod{acao\_rejeitada}; 3 seguidas: \cod{falha\_tecnica}\\
+\bottomrule
+\end{longtable}
+
+\noindent Assinaturas no log usadas por \cod{analista/analisar.py}: PA = \cod{acao\_executada} com \cod{d\_pede\_confirmacao}; AL = \cod{alerta\_exibido}; RA = \cod{d\_campo\_substituido} ou \cod{ajuda\_corrigir}; CE = \cod{erro\_capturado}; PP = passo em que \cod{rolar\_historico} não estava habilitado.
+
+\section{Ajuda sob demanda estratificada}
+A ajuda só aparece depois de uma fala $u{:}$ registrada (\cod{ajuda\_solicitada}); nunca é empurrada ao agente. Os três estratos seguem os tipos de dúvida de Shneiderman e Plaisant.
+
+\begin{tabularx}{\textwidth}{@{}P{2.4cm}P{3cm}P{2.6cm}LP{2.6cm}@{}}
+\toprule
+Tipo de dúvida & Pergunta da pessoa & Fala $u{:}$ & Conteúdo & O que não revela\\
+\midrule
+Significado & ``O que isto quer dizer?'' & \cod{reformular} & última mensagem do chat em lista literal, roteirizada por tarefa & nada além do que a mensagem já dizia\\
+Procedimento & ``Como faço?'' & \cod{ajuda\_como\_fazer} & como usar cartão, campos, Enviar, Rolar, Explicar e Encerrar & a resposta da tarefa, o campo certo\\
+Recuperação & ``Como corrijo?'' & \cod{ajuda\_corrigir} & enviar novo texto para o mesmo campo substitui o anterior & se o valor atual está certo\\
+\bottomrule
+\end{tabularx}
+
+\section{Rupturas de comunicação (MAC) e suas assinaturas}
+As rupturas são etiquetadas só por padrões de eventos; o texto livre do LLM nunca é lido para isso.
+
+\begin{tabularx}{\textwidth}{@{}P{2.6cm}LP{3.2cm}@{}}
+\toprule
+Etiqueta & Assinatura no log & Operação HTA\\
+\midrule
+Cadê? & \cod{enviar} antes de \cod{rolar\_historico} numa tarefa com bloco oculto & 2.2, 3.1\\
+O que é isto? & \cod{ajuda\_solicitada} do tipo significado (\cod{reformular}) & 2.3\\
+Socorro! & \cod{ajuda\_solicitada} do tipo procedimento & qualquer\\
+Epa! & \cod{d\_campo\_substituido} ou \cod{ajuda\_corrigir} & 3.1/4.1\\
+Assim não dá & \cod{nova\_pergunta} logo após \cod{reformular} & 2.4\\
+E agora? & duas ações seguidas sem mudança de campo na cena conversa & plano 2\\
+Para mim está bom & \cod{encerrada} com campo preenchido fora da chave (engano de avaliação) & 5.2\\
+Desisto & \cod{restricao\_aplicada} do limite de tentativas, \cod{confirmar\_encerrar} ou \cod{interrompida} & 5.2\\
+\bottomrule
+\end{tabularx}
+
+\section{Rastreabilidade com o código}
+\begin{tabularx}{\textwidth}{@{}P{4.2cm}L@{}}
+\toprule
+Artefato & Arquivo\\
+\midrule
+Roteiro das tarefas (tela) & \cod{roteiros/calibracao.json}, \cod{roteiros/validacao.json} (bloqueado sem \cod{--validacao-congelada})\\
+MoLIC e falas & \cod{uxagent/molic.py}\\
+Estado da interface & \cod{uxagent/interface.py}\\
+Tradutor de observação & \cod{uxagent/observacao.py}\\
+Mecanismos e amostrador & \cod{uxagent/mecanismos.py}, \cod{config/theta.json}\\
+Agente LLM & \cod{uxagent/agente.py}\\
+Registrador & \cod{uxagent/registrador.py}\\
+Verificador, KLM, MAC & \cod{analista/verificador.py}, \cod{analista/klm.py}, \cod{analista/analisar.py}, \cod{analista/gabaritos.json}\\
+\bottomrule
+\end{tabularx}
+\end{document}

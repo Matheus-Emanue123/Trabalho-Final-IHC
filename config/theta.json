@@ -1,0 +1,27 @@
+{
+  "versao": "theta-0.2",
+  "data": "2026-11-22",
+  "status": "calibracao (pode mudar so com C1/C2; congelar antes de V1/V2)",
+  "persona_id": "E",
+  "limite_acoes": 12,
+  "limite_propostas_invalidas": 3,
+  "alerta_acoes_restantes": 3,
+  "mecanismos_perfil": {
+    "capacidade_linguagem": {"P_alta": 0.5},
+    "filtro_leitura": {
+      "p_lit": {
+        "alta":  {"metafora": [0.10, 0.40], "ironia": [0.00, 0.15], "implicita": [0.10, 0.40]},
+        "media": {"metafora": [0.30, 0.70], "ironia": [0.15, 0.45], "implicita": [0.25, 0.65]}
+      }
+    },
+    "injetor_exploracao": {"p_explore": [0.15, 0.55]},
+    "limiar_suporte": {"p_sup": [0.40, 0.95]},
+    "aceite_prematuro": {"p_accept": [0.05, 0.40]}
+  },
+  "mecanismos_comuns": {
+    "nota": "Iguais nas duas condicoes (perfil e comparador); nao geram contraste.",
+    "hesitacao": {"media_s": [0.5, 2.5], "sigma_log": 0.5, "M_extra_figura": 1.35},
+    "limite_tentativas": {"acoes_sem_progresso": [5, 9]}
+  },
+  "klm": {"K": 0.28, "P": 1.10, "B": 0.10, "H": 0.40, "M": 1.35, "fonte": "Card, Moran e Newell (1980); MacKenzie (2013)"}
+}

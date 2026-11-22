@@ -1,0 +1,124 @@
+{
+  "nota": "INSTRUMENTO DO ANALISTA. Lido apenas por analista/verificador.py, analista/klm.py e pelos agentes de controle. Nunca é importado por uxagent/agente.py nem entra no prompt.",
+  "normalizacao": "minúsculas, sem acento, sem pontuação, espaços colapsados",
+  "tarefas": {
+    "C1": {
+      "chave": {
+        "Local": {
+          "contem": [
+            "3",
+            "lab"
+          ]
+        },
+        "Horario": {
+          "contem": [
+            "terca",
+            "14"
+          ]
+        }
+      },
+      "resposta_canonica": {
+        "Local": "laboratorio 3",
+        "Horario": "terca 14h"
+      },
+      "caminho_minimo": [
+        "enviar:Local",
+        "enviar:Horario",
+        "encerrar"
+      ],
+      "A_min": 3,
+      "figuras_por_campo": {}
+    },
+    "C2": {
+      "chave": {
+        "Entrega": {
+          "contem": [
+            "ideia central",
+            "duas consequ"
+          ]
+        },
+        "Prazo": {
+          "contem": [
+            "sexta",
+            "18"
+          ],
+          "nao_contem": [
+            "segunda"
+          ]
+        }
+      },
+      "resposta_canonica": {
+        "Entrega": "uma ideia central e duas consequencias",
+        "Prazo": "sexta 18h"
+      },
+      "caminho_minimo": [
+        "rolar_historico",
+        "enviar:Entrega",
+        "enviar:Prazo",
+        "encerrar"
+      ],
+      "A_min": 4,
+      "figuras_por_campo": {
+        "Prazo": "ironia",
+        "Entrega": "metafora"
+      }
+    },
+    "V1": {
+      "chave": {
+        "Local": {
+          "contem": [
+            "204"
+          ]
+        },
+        "Prazo": {
+          "contem": [
+            "sexta",
+            "17"
+          ]
+        }
+      },
+      "resposta_canonica": {
+        "Local": "sala 204 bloco C",
+        "Prazo": "sexta 17h"
+      },
+      "caminho_minimo": [
+        "rolar_historico",
+        "enviar:Local",
+        "enviar:Prazo",
+        "encerrar"
+      ],
+      "A_min": 4,
+      "figuras_por_campo": {}
+    },
+    "V2": {
+      "chave": {
+        "Prazo": {
+          "contem": [
+            "quarta",
+            "23"
+          ]
+        },
+        "Formato": {
+          "contem": [
+            "pdf"
+          ]
+        }
+      },
+      "resposta_canonica": {
+        "Prazo": "quarta 23h59",
+        "Formato": "pdf unico"
+      },
+      "caminho_minimo": [
+        "rolar_historico",
+        "enviar:Prazo",
+        "enviar:Formato",
+        "encerrar"
+      ],
+      "A_min": 4,
+      "figuras_por_campo": {
+        "Prazo": "implicita",
+        "Formato": "implicita"
+      }
+    }
+  }
+}

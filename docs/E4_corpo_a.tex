@@ -1,0 +1,74 @@
+\section{Introdução}
+Agentes baseados em grandes modelos de linguagem (LLM) já são usados para simular participantes em testes de usabilidade \cite{lu2025uxagent}. Três falhas recorrentes tornam esses registros pouco confiáveis: o perfil é apenas encenado por instruções no prompt, o agente recebe informação que a pessoa real não teria e o sucesso é declarado pelo próprio modelo \cite{lara2026p3}. Estudos de fidelidade mostram que LLMs instruídos por identidade homogeneízam e estereotipam grupos \cite{wang2025,park2025} e reproduzem mal ações individuais \cite{lu2026}.
+
+Este artigo relata a implementação do UX-Agent para um chat de estudo voltado a estudantes universitários autistas e responde à pergunta-chave: \emph{que decisões de design da interface instrumentada, do sistema de ajuda e do acoplamento agente-sistema permitem gerar registros auditáveis fornecendo ao agente apenas a informação que a persona teria?} A resposta é uma arquitetura em que (i) tela humana e observação do agente saem da mesma função, (ii) o diagrama MoLIC é a máquina de estados e restringe a resposta do LLM, (iii) o comportamento da persona vem de mecanismos parametrizados no código, (iv) a ajuda só chega por ação registrada e (v) o sucesso é decidido por um verificador externo. O caderno de design (Anexo E1) especifica metamensagem, paridade de signos, CTT, KLM, MoLIC, matriz de prevenção e recuperação e ajuda. O piloto usa só as tarefas de calibração.
+
+\section{Modelagem Herdada}
+A persona E. é fictícia: 21 anos, Engenharia de Computação, estuda sozinha à noite, adulta autista sem deficiência intelectual e com linguagem funcional (CID-11 6A02.0) \cite{who2024}, usuária regular de web e chat. O comparador sintético é o mesmo agente com os mecanismos de perfil desligados. Quatro tarefas foram congeladas na modelagem: C1 (localizar local e horário numa fala curta) e C2 (metáfora e ironia numa fala longa com bloco oculto) para calibração; V1 (localizar sala e prazo entre oito distratores) e V2 (instrução implícita) para validação. Cada tarefa tem uma HTA \cite{annett1967} com objetivo, planos e operações ligadas a eventos (ler cartão, rolar, reformular, nova pergunta, enviar campo, encerrar), caminho mínimo $A_{\min}$ (3 em C1; 4 nas demais) e erros previstos.
+
+As direções dos mecanismos vêm da literatura: a diferença de compreensão figurada é maior na metáfora que na ironia e quase some quando a habilidade de linguagem é equiparada \cite{kalandadze2018}; em busca na web, adultos autistas exploram mais elementos com sucesso semelhante \cite{eraslan2019}. As magnitudes são hipóteses operacionais.
+
+\section{Decisões de Design}
+A Tabela~\ref{tab:dec} lista as decisões com justificativa e status epistemológico: E (evidência empírica), P (princípio de design) ou H (hipótese operacional).
+
+\begin{table*}[t]
+\caption{Decisões de design, justificativa e status (E: evidência; P: princípio de design; H: hipótese operacional).}
+\label{tab:dec}
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}P{0.5cm}P{5.3cm}LP{0.4cm}@{}}
+\toprule
+Id & Decisão & Justificativa & St.\\
+\midrule
+D1 & Tela humana e observação $o_t$ geradas pela mesma função \cod{tela()} & Paridade de signos: a interface é metacomunicação com dois receptores \cite{kammersgaard1988,desouza2009} & P\\
+D2 & Resposta do LLM forçada por esquema JSON cujo \cod{enum} são as falas $u{:}$ habilitadas na cena MoLIC & A MoLIC define o espaço de ações; o agente não consegue agir fora do diálogo projetado \cite{barbosa2003} & P\\
+D3 & HTA, CTT, KLM e gabarito no pacote \cod{analista/}, nunca importado pelo agente & Fronteira de informação: instrumentos do analista \cite{dix2004,mackenzie2013} & P\\
+D4 & Filtro de leitura (R1) modulado pelo tipo de figura e pela habilidade de linguagem (R5) & Direção: metáfora $>$ ironia; efeito some com linguagem equiparada \cite{kalandadze2018}; magnitude H & E/H\\
+D5 & Injetor de exploração (R2): retira enviar e encerrar por um passo antes do primeiro envio & Mais exploração com sucesso semelhante \cite{eraslan2019}; magnitude H & E/H\\
+D6 & Limiar de suporte (R3) e aceite prematuro (R4) como filtros de \emph{affordance} & Desejo de esclarecimento sob demanda e dificuldade de avaliar respostas relatados em estudos de percepção \cite{haroon2024,jang2024} & H\\
+D7 & Hesitação lognormal por passo, +1 $M$ na primeira exposição a figura; desistência após $k$ ações sem progresso & Requisito do enunciado (tempo de hesitação, limite de tentativas) \cite{laviola2017}; sem estimativa publicada & H\\
+D8 & Ajuda em três estratos (significado, procedimento, recuperação), só por fala registrada & Ajuda sob demanda por tipo de dúvida \cite{shneiderman2010} & P\\
+D9 & Confirmação ao encerrar com campo vazio (PA), recusa de texto vazio (CE), substituição com valor anterior (RA), alerta com 3 ações (AL) & Prevenção e recuperação de erros \cite{shneiderman2010,reason1990} & P\\
+D10 & Rupturas MAC e mecanismos PP/PA/AL/RA/CE detectados só por assinatura de eventos & Não inferir ruptura do discurso emocional do LLM \cite{lara2026p3,desouza2009,nielsen2010} & P\\
+D11 & Sucesso decidido por verificador que lê só o estado final & A afirmação do agente não é critério \cite{lara2026p3} & P\\
+D12 & Tempo simulado = operadores KLM da fala + hesitação; latência da API gravada à parte & Operadores de \cite{card1980}; hesitação H & E/H\\
+D13 & V1 e V2 bloqueadas no código sem a opção \cod{--validacao-congelada} & Separação calibração/validação & P\\
+D14 & Temperatura 0 e semente fixa; memória das próprias ações dentro da tarefa, reiniciada entre tarefas & Reprodutibilidade; memória de curto prazo equivalente à da pessoa & P/H\\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Arquitetura e Acoplamento Agente-Sistema}
+A Fig.~\ref{fig:arq} mostra o ciclo de um passo. O \emph{amostrador} sorteia, no início da execução, $h$, $p_{\text{lit}}$, $p_{\text{explore}}$, $p_{\text{sup}}$, $p_{\text{accept}}$, a hesitação média e o limite $k$ (semente $=$ 20261026 $+\,i$). A cada passo: (1) a MoLIC devolve as falas habilitadas no estado; (2) o controlador aplica os filtros de \emph{affordance}; (3) o tradutor monta $o_t$ a partir da tela, aplicando o filtro de leitura se sorteado; (4) o LLM (\cod{gpt-4o-mini-2024-07-18}, temperatura 0) recebe prompt de sistema fixo, instrução do protocolo, histórico das próprias ações e $o_t$, e responde \cod{\{acao, campo, texto\}} sob esquema estrito; (5) o executor aplica a fala, gera a fala $d{:}$ e atualiza o estado; (6) o registrador grava os eventos. Propostas fora da lista são rejeitadas; três seguidas, ou três erros de API, encerram como falha técnica. O verificador roda depois, fora do laço. O prompt de sistema não menciona autismo, diagnóstico, figura nem critério de sucesso.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\scriptsize, b/.style={draw, rounded corners=1pt, align=center, minimum height=7mm, minimum width=17mm, inner sep=2pt}, >=Stealth]
+\node[b] (amo) at (0,0) {Amostrador\\$\theta$, semente};
+\node[b] (mol) at (2.8,0) {MoLIC\\falas $u{:}$};
+\node[b] (ctl) at (5.6,0) {Controlador\\R1--R5, $k$};
+\node[b] (obs) at (5.6,-1.3) {Tradutor $o_t$};
+\node[b] (llm) at (5.6,-2.6) {LLM\\JSON + \cod{enum}};
+\node[b] (exe) at (2.8,-2.6) {Executor\\$u{:}\rightarrow d{:}$};
+\node[b] (est) at (2.8,-1.3) {Estado da\\interface};
+\node[b] (log) at (0,-2.6) {Registrador\\JSON};
+\node[b] (ver) at (0,-1.3) {Verificador\\externo};
+\draw[->] (amo.north) -- ++(0,0.35) -| (ctl.north);
+\draw[->] (mol) -- (ctl);
+\draw[->] (ctl) -- (obs);
+\draw[->] (est) -- (obs);
+\draw[->] (obs) -- (llm);
+\draw[->] (llm) -- node[above]{proposta} (exe);
+\draw[->] (exe) -- (est);
+\draw[->] (est) -- (mol);
+\draw[->] (exe) -- (log);
+\draw[->, dashed] (est) -- node[above]{final} (ver);
+\draw[->, dashed] (ver) -- (log);
+\end{tikzpicture}
+\caption{Acoplamento agente-sistema. Tracejado: fora do laço do agente.}
+\label{fig:arq}
+\end{figure}
+
+\section{Instrumentação}
+Cada execução gera um arquivo JSON com \cod{meta}, \cod{eventos} e \cod{estado\_final}. Todo evento traz identificador da execução, persona, tarefa, conjunto, condição, \cod{config\_id} (hash de $\theta$, prompt, roteiro e modelo), semente, passo, carimbo de tempo ISO 8601, tipo, cena MoLIC, fala $u{:}$, resposta $d{:}$, dados e origem. São 15 tipos, entre eles \cod{observacao\_exposta} (tela integral), \cod{observacao\_transformada} ($o_t$ enviado), \cod{restricao\_aplicada} (mecanismo, falas retiradas e probabilidade), \cod{acao\_proposta} (prompt completo, resposta bruta, modelo devolvido, tokens e latência), \cod{acao\_executada} (campos antes e depois, operadores KLM, hesitação) e \cod{avaliacao\_externa} (escrito só pelo verificador). Assim, cada desvio entre o que a tela mostrou e o que o agente recebeu fica no próprio log.
+
+Regras de detecção, todas sobre eventos: deslize = \cod{erro\_capturado} ou campo trocado; lapso = campo obrigatório vazio no fim; engano de interpretação = envio fora da chave num campo ligado a figura; engano de avaliação = \cod{encerrada} com campo preenchido fora da chave \cite{reason1990}. Rupturas MAC \cite{desouza2009}: ``Cadê?'' (enviar antes de rolar com bloco oculto), ``O que é isto?'' (ajuda de significado), ``Epa!'' (campo substituído), ``Assim não dá'' (nova pergunta após reformular), ``E agora?'' (duas ações sem progresso), ``Para mim está bom'' (engano de avaliação) e ``Desisto'' (limite de tentativas, confirmação com campo vazio ou interrupção).

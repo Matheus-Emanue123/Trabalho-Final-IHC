@@ -1,0 +1,57 @@
+{
+  "versao": "roteiro-0.2",
+  "data_congelamento": "2026-11-19",
+  "nota": "TAREFAS DE VALIDAÇÃO CONGELADAS. Não executar no piloto nem usar para ajustar prompt ou parâmetros. O executor recusa este arquivo sem a opção --validacao-congelada.",
+  "tarefas": {
+    "V1": {
+      "conjunto": "validacao",
+      "titulo": "Prova substitutiva",
+      "cartao": "Descubra onde será a prova substitutiva de Cálculo II e até quando é preciso se inscrever. Preencha Local e Prazo. Quando estiver como você quer, encerre.",
+      "campos": ["Local", "Prazo"],
+      "distratores": 8,
+      "blocos": [
+        {
+          "id": "A",
+          "oculto": false,
+          "figura": null,
+          "texto": "Avisos da semana: o laboratório 2 fecha na quarta; a cantina muda o cardápio na quinta; a biblioteca abre às 7h; a prova substitutiva de Cálculo II será na sala 204 do bloco C; o ônibus intercampi sai mais cedo; o mural de estágios foi para o bloco D.",
+          "superficial": null
+        },
+        {
+          "id": "B",
+          "oculto": true,
+          "figura": null,
+          "texto": "A inscrição na substitutiva vai até sexta, às 17h, pelo SIGAA. O estacionamento do bloco B fica interditado no feriado.",
+          "superficial": null
+        }
+      ],
+      "reformulacao": "Prova substitutiva de Cálculo II: sala 204, bloco C. Inscrição até sexta, 17h, pelo SIGAA.",
+      "nova_pergunta": "Não tenho outra informação além da mensagem já exibida."
+    },
+    "V2": {
+      "conjunto": "validacao",
+      "titulo": "Versão final do relatório",
+      "cartao": "Descubra até quando e em que formato a versão final deve ser enviada. Preencha Prazo e Formato. Quando estiverem como você quer, encerre.",
+      "campos": ["Prazo", "Formato"],
+      "distratores": 6,
+      "blocos": [
+        {
+          "id": "A",
+          "oculto": false,
+          "figura": null,
+          "texto": "O laboratório fecha mais cedo na sexta; a impressora do bloco C está sem toner; o acervo de periódicos fecha segunda de manhã; o ponto de ônibus do bloco A mudou; o mural de estágios foi para o bloco D; o almoço de quinta terá cardápio reduzido.",
+          "superficial": null
+        },
+        {
+          "id": "B",
+          "oculto": true,
+          "figura": "implicita",
+          "texto": "Sobre a versão final, quem deixa para a véspera costuma perder o horário: o envio fecha quarta às 23h59, em PDF único.",
+          "superficial": "Sobre a versão final, quem deixa para a véspera costuma perder o horário."
+        }
+      ],
+      "reformulacao": "Prazo: quarta, 23h59. Formato: PDF único.",
+      "nova_pergunta": "Não tenho outra informação além da mensagem já exibida."
+    }
+  }
+}

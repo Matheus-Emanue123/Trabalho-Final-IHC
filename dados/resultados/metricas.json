@@ -1,0 +1,6373 @@
+{
+ "resumo": [
+  {
+   "tarefa": "C1",
+   "condicao": "comparador",
+   "n": 30,
+   "S": 1.0,
+   "erros_total": {},
+   "R_e_interp": null,
+   "R_e_campo": 0.0,
+   "R_e_aval": 0.0,
+   "A_mediana": 3.0,
+   "A_min_obs": 3,
+   "A_max_obs": 3,
+   "A_min_klm": 3,
+   "A_excesso_mediano": 0.0,
+   "U_s_medio": 0,
+   "frac_com_suporte": 0.0,
+   "ajudas_total": {},
+   "tempo_sim_mediano_s": 22.81,
+   "tempo_klm_s": 17.81,
+   "razao_tempo_klm": 1.28,
+   "mac_total": {},
+   "ihc_total": {
+    "PP": 90
+   },
+   "mecanismos_disparados": {},
+   "rejeitadas": 0,
+   "falhas_tecnicas": 0,
+   "latencia_llm_mediana_s": 0.781,
+   "tokens_total": 54810
+  },
+  {
+   "tarefa": "C1",
+   "condicao": "perfil",
+   "n": 30,
+   "S": 1.0,
+   "erros_total": {},
+   "R_e_interp": null,
+   "R_e_campo": 0.0,
+   "R_e_aval": 0.0,
+   "A_mediana": 3.0,
+   "A_min_obs": 3,
+   "A_max_obs": 4,
+   "A_min_klm": 3,
+   "A_excesso_mediano": 0.0,
+   "U_s_medio": 0.467,
+   "frac_com_suporte": 0.467,
+   "ajudas_total": {
+    "significado": 14
+   },
+   "tempo_sim_mediano_s": 24.75,
+   "tempo_klm_s": 17.81,
+   "razao_tempo_klm": 1.39,
+   "mac_total": {
+    "O que é isto?": 14
+   },
+   "ihc_total": {
+    "PP": 104
+   },
+   "mecanismos_disparados": {
+    "injetor_exploracao": 14,
+    "aceite_prematuro": 2
+   },
+   "rejeitadas": 0,
+   "falhas_tecnicas": 0,
+   "latencia_llm_mediana_s": 0.743,
+   "tokens_total": 63640
+  },
+  {
+   "tarefa": "C2",
+   "condicao": "comparador",
+   "n": 30,
+   "S": 0.0,
+   "erros_total": {
+    "engano_interpretacao": 30,
+    "engano_avaliacao": 30
+   },
+   "R_e_interp": 0.5,
+   "R_e_campo": 0.5,
+   "R_e_aval": 1.0,
+   "A_mediana": 4.0,
+   "A_min_obs": 4,
+   "A_max_obs": 4,
+   "A_min_klm": 4,
+   "A_excesso_mediano": 0.0,
+   "U_s_medio": 0,
+   "frac_com_suporte": 0.0,
+   "ajudas_total": {},
+   "tempo_sim_mediano_s": 33.29,
+   "tempo_klm_s": 27.36,
+   "razao_tempo_klm": 1.22,
+   "mac_total": {
+    "Para mim está bom": 30
+   },
+   "ihc_total": {
+    "PP": 90
+   },
+   "mecanismos_disparados": {},
+   "rejeitadas": 0,
+   "falhas_tecnicas": 0,
+   "latencia_llm_mediana_s": 0.9095,
+   "tokens_total": 81570
+  },
+  {
+   "tarefa": "C2",
+   "condicao": "perfil",
+   "n": 30,
+   "S": 0.0,
+   "erros_total": {
+    "engano_interpretacao": 34,
+    "engano_avaliacao": 30
+   },
+   "R_e_interp": 0.567,
+   "R_e_campo": 0.567,
+   "R_e_aval": 1.0,
+   "A_mediana": 4.0,
+   "A_min_obs": 4,
+   "A_max_obs": 5,
+   "A_min_klm": 4,
+   "A_excesso_mediano": 0.0,
+   "U_s_medio": 0,
+   "frac_com_suporte": 0.0,
+   "ajudas_total": {},
+   "tempo_sim_mediano_s": 34.77,
+   "tempo_klm_s": 27.36,
+   "razao_tempo_klm": 1.27,
+   "mac_total": {
+    "Para mim está bom": 30,
+    "E agora?": 4
+   },
+   "ihc_total": {
+    "PP": 95
+   },
+   "mecanismos_disparados": {
+    "limiar_suporte": 18,
+    "injetor_exploracao": 13,
+    "filtro_leitura": 63,
+    "aceite_prematuro": 7
+   },
+   "rejeitadas": 0,
+   "falhas_tecnicas": 0,
+   "latencia_llm_mediana_s": 0.8895,
+   "tokens_total": 82383
+  }
+ ],
+ "sessoes": {
+  "C1_comparador": [
+   {
+    "execucao_id": "C1_comparador_s20261026",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 21.965,
+    "latencia_llm_media_s": 0.708,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.209,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261027",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.652,
+    "latencia_llm_media_s": 0.768,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.34,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261028",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.832,
+    "latencia_llm_media_s": 0.747,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.784,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261029",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.167,
+    "latencia_llm_media_s": 0.719,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.348,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261030",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.75,
+    "latencia_llm_media_s": 0.778,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.04,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261031",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.78,
+    "latencia_llm_media_s": 0.788,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.716,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261032",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.486,
+    "latencia_llm_media_s": 0.728,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.241,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261033",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.789,
+    "latencia_llm_media_s": 0.864,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.469,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261034",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 19.615,
+    "latencia_llm_media_s": 0.756,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.542,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261035",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.689,
+    "latencia_llm_media_s": 0.774,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.413,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261036",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 19.732,
+    "latencia_llm_media_s": 0.794,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.726,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261037",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.394,
+    "latencia_llm_media_s": 0.702,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.112,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261038",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.49,
+    "latencia_llm_media_s": 0.815,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.451,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261039",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.351,
+    "latencia_llm_media_s": 0.829,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.35,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261040",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 28.203,
+    "latencia_llm_media_s": 0.869,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.846,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261041",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 22.622,
+    "latencia_llm_media_s": 0.801,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.717,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261042",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.724,
+    "latencia_llm_media_s": 0.732,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.722,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261043",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.085,
+    "latencia_llm_media_s": 0.971,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.996,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261044",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 26.175,
+    "latencia_llm_media_s": 0.787,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.148,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261045",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.541,
+    "latencia_llm_media_s": 0.797,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.362,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261046",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 22.508,
+    "latencia_llm_media_s": 0.755,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.012,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261047",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.13,
+    "latencia_llm_media_s": 0.744,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.109,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261048",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 21.524,
+    "latencia_llm_media_s": 0.667,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.084,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261049",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 21.317,
+    "latencia_llm_media_s": 0.78,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.929,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261050",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.512,
+    "latencia_llm_media_s": 0.862,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.594,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261051",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.815,
+    "latencia_llm_media_s": 0.705,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.649,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261052",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 22.133,
+    "latencia_llm_media_s": 0.853,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.412,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261053",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.243,
+    "latencia_llm_media_s": 0.782,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.09,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261054",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.0,
+    "latencia_llm_media_s": 0.783,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.641,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_comparador_s20261055",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 19.517,
+    "latencia_llm_media_s": 1.075,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.649,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   }
+  ],
+  "C1_perfil": [
+   {
+    "execucao_id": "C1_perfil_s20261026",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 26.085,
+    "latencia_llm_media_s": 1.098,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1683,
+      "ironia": 0.0199,
+      "implicita": 0.2458
+     },
+     "p_explore": 0.3668,
+     "p_sup": 0.4048,
+     "p_accept": 0.1902,
+     "hesitacao_media_s": 1.209,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261027",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.652,
+    "latencia_llm_media_s": 0.865,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3425,
+      "ironia": 0.0286,
+      "implicita": 0.1563
+     },
+     "p_explore": 0.1905,
+     "p_sup": 0.4141,
+     "p_accept": 0.2224,
+     "hesitacao_media_s": 1.34,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261028",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.739,
+    "latencia_llm_media_s": 0.734,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5234,
+      "ironia": 0.3674,
+      "implicita": 0.625
+     },
+     "p_explore": 0.3813,
+     "p_sup": 0.5167,
+     "p_accept": 0.2247,
+     "hesitacao_media_s": 0.784,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261029",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.167,
+    "latencia_llm_media_s": 0.742,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3902,
+      "ironia": 0.4411,
+      "implicita": 0.4341
+     },
+     "p_explore": 0.2224,
+     "p_sup": 0.7768,
+     "p_accept": 0.3931,
+     "hesitacao_media_s": 1.348,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261030",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.822,
+    "latencia_llm_media_s": 0.705,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5241,
+      "ironia": 0.4097,
+      "implicita": 0.265
+     },
+     "p_explore": 0.4673,
+     "p_sup": 0.7251,
+     "p_accept": 0.1417,
+     "hesitacao_media_s": 1.04,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261031",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.78,
+    "latencia_llm_media_s": 0.838,
+    "tokens": 1713,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3291,
+      "ironia": 0.0563,
+      "implicita": 0.2538
+     },
+     "p_explore": 0.2335,
+     "p_sup": 0.6617,
+     "p_accept": 0.271,
+     "hesitacao_media_s": 0.716,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261032",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.486,
+    "latencia_llm_media_s": 0.738,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.333,
+      "ironia": 0.3199,
+      "implicita": 0.31
+     },
+     "p_explore": 0.4092,
+     "p_sup": 0.745,
+     "p_accept": 0.1912,
+     "hesitacao_media_s": 1.241,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261033",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.381,
+    "latencia_llm_media_s": 0.772,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5256,
+      "ironia": 0.2447,
+      "implicita": 0.6329
+     },
+     "p_explore": 0.5333,
+     "p_sup": 0.881,
+     "p_accept": 0.2047,
+     "hesitacao_media_s": 2.469,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261034",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 19.615,
+    "latencia_llm_media_s": 0.693,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1865,
+      "ironia": 0.0553,
+      "implicita": 0.3675
+     },
+     "p_explore": 0.2265,
+     "p_sup": 0.5886,
+     "p_accept": 0.2393,
+     "hesitacao_media_s": 0.542,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261035",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.689,
+    "latencia_llm_media_s": 0.701,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3684,
+      "ironia": 0.0027,
+      "implicita": 0.2738
+     },
+     "p_explore": 0.4785,
+     "p_sup": 0.6745,
+     "p_accept": 0.1117,
+     "hesitacao_media_s": 2.413,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261036",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.3,
+    "latencia_llm_media_s": 0.721,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.2603,
+      "ironia": 0.0144,
+      "implicita": 0.1596
+     },
+     "p_explore": 0.3671,
+     "p_sup": 0.4197,
+     "p_accept": 0.3785,
+     "hesitacao_media_s": 0.726,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261037",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.394,
+    "latencia_llm_media_s": 0.744,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.2111,
+      "ironia": 0.0674,
+      "implicita": 0.2113
+     },
+     "p_explore": 0.5311,
+     "p_sup": 0.6655,
+     "p_accept": 0.149,
+     "hesitacao_media_s": 2.112,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261038",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 28.329,
+    "latencia_llm_media_s": 0.649,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3628,
+      "ironia": 0.3795,
+      "implicita": 0.4197
+     },
+     "p_explore": 0.241,
+     "p_sup": 0.8396,
+     "p_accept": 0.0575,
+     "hesitacao_media_s": 1.451,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261039",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 27.418,
+    "latencia_llm_media_s": 0.729,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6977,
+      "ironia": 0.4076,
+      "implicita": 0.3885
+     },
+     "p_explore": 0.3721,
+     "p_sup": 0.902,
+     "p_accept": 0.3703,
+     "hesitacao_media_s": 1.35,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261040",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.437,
+    "latencia_llm_media_s": 0.768,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3279,
+      "ironia": 0.4465,
+      "implicita": 0.4375
+     },
+     "p_explore": 0.2919,
+     "p_sup": 0.4077,
+     "p_accept": 0.3078,
+     "hesitacao_media_s": 1.846,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261041",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 22.622,
+    "latencia_llm_media_s": 0.749,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6829,
+      "ironia": 0.4147,
+      "implicita": 0.3407
+     },
+     "p_explore": 0.2693,
+     "p_sup": 0.7077,
+     "p_accept": 0.3993,
+     "hesitacao_media_s": 1.717,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261042",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.724,
+    "latencia_llm_media_s": 0.907,
+    "tokens": 1713,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6112,
+      "ironia": 0.1838,
+      "implicita": 0.437
+     },
+     "p_explore": 0.3092,
+     "p_sup": 0.5773,
+     "p_accept": 0.1126,
+     "hesitacao_media_s": 1.722,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261043",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 26.033,
+    "latencia_llm_media_s": 0.798,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4011,
+      "ironia": 0.3069,
+      "implicita": 0.5089
+     },
+     "p_explore": 0.2141,
+     "p_sup": 0.7726,
+     "p_accept": 0.2943,
+     "hesitacao_media_s": 0.996,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261044",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 26.175,
+    "latencia_llm_media_s": 0.679,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3082,
+      "ironia": 0.2696,
+      "implicita": 0.4791
+     },
+     "p_explore": 0.2436,
+     "p_sup": 0.4913,
+     "p_accept": 0.2125,
+     "hesitacao_media_s": 2.148,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261045",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 31.552,
+    "latencia_llm_media_s": 0.724,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4269,
+      "ironia": 0.2956,
+      "implicita": 0.5888
+     },
+     "p_explore": 0.4087,
+     "p_sup": 0.4564,
+     "p_accept": 0.3688,
+     "hesitacao_media_s": 2.362,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261046",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.413,
+    "latencia_llm_media_s": 0.932,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3551,
+      "ironia": 0.0238,
+      "implicita": 0.2645
+     },
+     "p_explore": 0.4452,
+     "p_sup": 0.5928,
+     "p_accept": 0.0576,
+     "hesitacao_media_s": 1.012,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261047",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 28.196,
+    "latencia_llm_media_s": 0.71,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4797,
+      "ironia": 0.3258,
+      "implicita": 0.4124
+     },
+     "p_explore": 0.2488,
+     "p_sup": 0.5594,
+     "p_accept": 0.351,
+     "hesitacao_media_s": 2.109,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261048",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 21.524,
+    "latencia_llm_media_s": 0.756,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1227,
+      "ironia": 0.0159,
+      "implicita": 0.3433
+     },
+     "p_explore": 0.2829,
+     "p_sup": 0.7502,
+     "p_accept": 0.2817,
+     "hesitacao_media_s": 2.084,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261049",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 21.317,
+    "latencia_llm_media_s": 0.795,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.184,
+      "ironia": 0.0117,
+      "implicita": 0.2521
+     },
+     "p_explore": 0.3298,
+     "p_sup": 0.6033,
+     "p_accept": 0.2936,
+     "hesitacao_media_s": 1.929,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261050",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 20.512,
+    "latencia_llm_media_s": 0.747,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3783,
+      "ironia": 0.0032,
+      "implicita": 0.2354
+     },
+     "p_explore": 0.2041,
+     "p_sup": 0.4905,
+     "p_accept": 0.2732,
+     "hesitacao_media_s": 1.594,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261051",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 24.815,
+    "latencia_llm_media_s": 0.914,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4305,
+      "ironia": 0.3471,
+      "implicita": 0.5649
+     },
+     "p_explore": 0.1627,
+     "p_sup": 0.4543,
+     "p_accept": 0.3219,
+     "hesitacao_media_s": 1.649,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261052",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 25.075,
+    "latencia_llm_media_s": 0.809,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5712,
+      "ironia": 0.2468,
+      "implicita": 0.6451
+     },
+     "p_explore": 0.4743,
+     "p_sup": 0.4326,
+     "p_accept": 0.3782,
+     "hesitacao_media_s": 1.412,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261053",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 23.243,
+    "latencia_llm_media_s": 0.692,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1023,
+      "ironia": 0.0986,
+      "implicita": 0.349
+     },
+     "p_explore": 0.3963,
+     "p_sup": 0.6076,
+     "p_accept": 0.1706,
+     "hesitacao_media_s": 1.09,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261054",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 1,
+    "U_s": 1,
+    "ajudas": {
+     "significado": 1
+    },
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "O que é isto?": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.623,
+    "latencia_llm_media_s": 0.707,
+    "tokens": 2474,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.369,
+      "ironia": 0.0289,
+      "implicita": 0.1704
+     },
+     "p_explore": 0.2802,
+     "p_sup": 0.5012,
+     "p_accept": 0.3575,
+     "hesitacao_media_s": 1.641,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C1_perfil_s20261055",
+    "sucesso": true,
+    "status": "encerrada",
+    "A": 3,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {},
+    "oport": {
+     "interpretacao": 0,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {},
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 19.517,
+    "latencia_llm_media_s": 0.652,
+    "tokens": 1827,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.498,
+      "ironia": 0.4063,
+      "implicita": 0.4129
+     },
+     "p_explore": 0.2345,
+     "p_sup": 0.6724,
+     "p_accept": 0.1727,
+     "hesitacao_media_s": 0.649,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [],
+    "campos_vazios_fim": []
+   }
+  ],
+  "C2_comparador": [
+   {
+    "execucao_id": "C2_comparador_s20261026",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 31.376,
+    "latencia_llm_media_s": 0.862,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.209,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261027",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.76,
+    "latencia_llm_media_s": 0.911,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.34,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261028",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 31.812,
+    "latencia_llm_media_s": 0.911,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.784,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261029",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.805,
+    "latencia_llm_media_s": 0.828,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.348,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261030",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 31.81,
+    "latencia_llm_media_s": 0.864,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.04,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261031",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.998,
+    "latencia_llm_media_s": 0.908,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.716,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261032",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.051,
+    "latencia_llm_media_s": 0.914,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.241,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261033",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 39.195,
+    "latencia_llm_media_s": 0.948,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.469,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261034",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.468,
+    "latencia_llm_media_s": 0.944,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.542,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261035",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 38.175,
+    "latencia_llm_media_s": 0.969,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.413,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261036",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.306,
+    "latencia_llm_media_s": 1.047,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.726,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261037",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.735,
+    "latencia_llm_media_s": 0.92,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.112,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261038",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.987,
+    "latencia_llm_media_s": 0.971,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.451,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261039",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.756,
+    "latencia_llm_media_s": 0.92,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.35,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261040",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 37.636,
+    "latencia_llm_media_s": 0.92,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.846,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261041",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.367,
+    "latencia_llm_media_s": 0.895,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.717,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261042",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 37.76,
+    "latencia_llm_media_s": 0.818,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.722,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261043",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 30.722,
+    "latencia_llm_media_s": 0.945,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.996,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261044",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 38.216,
+    "latencia_llm_media_s": 0.844,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.148,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261045",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 39.842,
+    "latencia_llm_media_s": 0.92,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.362,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261046",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.537,
+    "latencia_llm_media_s": 0.843,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.012,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261047",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 36.99,
+    "latencia_llm_media_s": 0.869,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.109,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261048",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.043,
+    "latencia_llm_media_s": 0.894,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 2.084,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261049",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.258,
+    "latencia_llm_media_s": 0.851,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.929,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261050",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 30.974,
+    "latencia_llm_media_s": 0.883,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.594,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261051",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 36.042,
+    "latencia_llm_media_s": 1.013,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.649,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261052",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.53,
+    "latencia_llm_media_s": 0.847,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.412,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261053",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.69,
+    "latencia_llm_media_s": 0.874,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.09,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261054",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.898,
+    "latencia_llm_media_s": 0.923,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 1.641,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_comparador_s20261055",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 28.971,
+    "latencia_llm_media_s": 0.886,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "comparador",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.0,
+      "ironia": 0.0,
+      "implicita": 0.0
+     },
+     "p_explore": 0.0,
+     "p_sup": 0.0,
+     "p_accept": 0.0,
+     "hesitacao_media_s": 0.649,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   }
+  ],
+  "C2_perfil": [
+   {
+    "execucao_id": "C2_perfil_s20261026",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 31.376,
+    "latencia_llm_media_s": 1.137,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1683,
+      "ironia": 0.0199,
+      "implicita": 0.2458
+     },
+     "p_explore": 0.3668,
+     "p_sup": 0.4048,
+     "p_accept": 0.1902,
+     "hesitacao_media_s": 1.209,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261027",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.76,
+    "latencia_llm_media_s": 0.981,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3425,
+      "ironia": 0.0286,
+      "implicita": 0.1563
+     },
+     "p_explore": 0.1905,
+     "p_sup": 0.4141,
+     "p_accept": 0.2224,
+     "hesitacao_media_s": 1.34,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261028",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1,
+     "filtro_leitura": 4,
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 45.252,
+    "latencia_llm_media_s": 0.849,
+    "tokens": 2503,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5234,
+      "ironia": 0.3674,
+      "implicita": 0.625
+     },
+     "p_explore": 0.3813,
+     "p_sup": 0.5167,
+     "p_accept": 0.2247,
+     "hesitacao_media_s": 0.784,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261029",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.805,
+    "latencia_llm_media_s": 0.853,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3902,
+      "ironia": 0.4411,
+      "implicita": 0.4341
+     },
+     "p_explore": 0.2224,
+     "p_sup": 0.7768,
+     "p_accept": 0.3931,
+     "hesitacao_media_s": 1.348,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261030",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 5,
+    "A_excesso": 1,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 2,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "E agora?": 1,
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1,
+     "filtro_leitura": 9
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 50.703,
+    "latencia_llm_media_s": 0.887,
+    "tokens": 3289,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5241,
+      "ironia": 0.4097,
+      "implicita": 0.265
+     },
+     "p_explore": 0.4673,
+     "p_sup": 0.7251,
+     "p_accept": 0.1417,
+     "hesitacao_media_s": 1.04,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega",
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261031",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.998,
+    "latencia_llm_media_s": 0.81,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3291,
+      "ironia": 0.0563,
+      "implicita": 0.2538
+     },
+     "p_explore": 0.2335,
+     "p_sup": 0.6617,
+     "p_accept": 0.271,
+     "hesitacao_media_s": 0.716,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261032",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.051,
+    "latencia_llm_media_s": 0.867,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.333,
+      "ironia": 0.3199,
+      "implicita": 0.31
+     },
+     "p_explore": 0.4092,
+     "p_sup": 0.745,
+     "p_accept": 0.1912,
+     "hesitacao_media_s": 1.241,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261033",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 39.195,
+    "latencia_llm_media_s": 0.899,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5256,
+      "ironia": 0.2447,
+      "implicita": 0.6329
+     },
+     "p_explore": 0.5333,
+     "p_sup": 0.881,
+     "p_accept": 0.2047,
+     "hesitacao_media_s": 2.469,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261034",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.468,
+    "latencia_llm_media_s": 1.24,
+    "tokens": 2614,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1865,
+      "ironia": 0.0553,
+      "implicita": 0.3675
+     },
+     "p_explore": 0.2265,
+     "p_sup": 0.5886,
+     "p_accept": 0.2393,
+     "hesitacao_media_s": 0.542,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261035",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 38.175,
+    "latencia_llm_media_s": 0.903,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3684,
+      "ironia": 0.0027,
+      "implicita": 0.2738
+     },
+     "p_explore": 0.4785,
+     "p_sup": 0.6745,
+     "p_accept": 0.1117,
+     "hesitacao_media_s": 2.413,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261036",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 29.306,
+    "latencia_llm_media_s": 0.879,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.2603,
+      "ironia": 0.0144,
+      "implicita": 0.1596
+     },
+     "p_explore": 0.3671,
+     "p_sup": 0.4197,
+     "p_accept": 0.3785,
+     "hesitacao_media_s": 0.726,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261037",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.735,
+    "latencia_llm_media_s": 0.91,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.2111,
+      "ironia": 0.0674,
+      "implicita": 0.2113
+     },
+     "p_explore": 0.5311,
+     "p_sup": 0.6655,
+     "p_accept": 0.149,
+     "hesitacao_media_s": 2.112,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261038",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "filtro_leitura": 4
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 46.307,
+    "latencia_llm_media_s": 0.894,
+    "tokens": 2617,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3628,
+      "ironia": 0.3795,
+      "implicita": 0.4197
+     },
+     "p_explore": 0.241,
+     "p_sup": 0.8396,
+     "p_accept": 0.0575,
+     "hesitacao_media_s": 1.451,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261039",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "filtro_leitura": 4
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 45.076,
+    "latencia_llm_media_s": 0.92,
+    "tokens": 2617,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6977,
+      "ironia": 0.4076,
+      "implicita": 0.3885
+     },
+     "p_explore": 0.3721,
+     "p_sup": 0.902,
+     "p_accept": 0.3703,
+     "hesitacao_media_s": 1.35,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261040",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 5,
+    "A_excesso": 1,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "filtro_leitura": 5
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 54.204,
+    "latencia_llm_media_s": 0.941,
+    "tokens": 3421,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3279,
+      "ironia": 0.4465,
+      "implicita": 0.4375
+     },
+     "p_explore": 0.2919,
+     "p_sup": 0.4077,
+     "p_accept": 0.3078,
+     "hesitacao_media_s": 1.846,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261041",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 5,
+    "A_excesso": 1,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 2,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "E agora?": 1,
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "filtro_leitura": 9,
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 51.503,
+    "latencia_llm_media_s": 0.818,
+    "tokens": 3175,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6829,
+      "ironia": 0.4147,
+      "implicita": 0.3407
+     },
+     "p_explore": 0.2693,
+     "p_sup": 0.7077,
+     "p_accept": 0.3993,
+     "hesitacao_media_s": 1.717,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega",
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261042",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 37.76,
+    "latencia_llm_media_s": 1.058,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6112,
+      "ironia": 0.1838,
+      "implicita": 0.437
+     },
+     "p_explore": 0.3092,
+     "p_sup": 0.5773,
+     "p_accept": 0.1126,
+     "hesitacao_media_s": 1.722,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261043",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1,
+     "filtro_leitura": 4
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 43.042,
+    "latencia_llm_media_s": 0.884,
+    "tokens": 2617,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4011,
+      "ironia": 0.3069,
+      "implicita": 0.5089
+     },
+     "p_explore": 0.2141,
+     "p_sup": 0.7726,
+     "p_accept": 0.2943,
+     "hesitacao_media_s": 0.996,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261044",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 38.216,
+    "latencia_llm_media_s": 0.903,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.3082,
+      "ironia": 0.2696,
+      "implicita": 0.4791
+     },
+     "p_explore": 0.2436,
+     "p_sup": 0.4913,
+     "p_accept": 0.2125,
+     "hesitacao_media_s": 2.148,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261045",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 5,
+    "A_excesso": 1,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 2,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "E agora?": 1,
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1,
+     "filtro_leitura": 9,
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 54.311,
+    "latencia_llm_media_s": 0.87,
+    "tokens": 3175,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4269,
+      "ironia": 0.2956,
+      "implicita": 0.5888
+     },
+     "p_explore": 0.4087,
+     "p_sup": 0.4564,
+     "p_accept": 0.3688,
+     "hesitacao_media_s": 2.362,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega",
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261046",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1,
+     "filtro_leitura": 3
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.537,
+    "latencia_llm_media_s": 0.939,
+    "tokens": 2612,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3551,
+      "ironia": 0.0238,
+      "implicita": 0.2645
+     },
+     "p_explore": 0.4452,
+     "p_sup": 0.5928,
+     "p_accept": 0.0576,
+     "hesitacao_media_s": 1.012,
+     "k_desistencia": 7
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261047",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 5,
+    "A_excesso": 1,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 2,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "E agora?": 1,
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 4
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "filtro_leitura": 9
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 52.548,
+    "latencia_llm_media_s": 0.874,
+    "tokens": 3289,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4797,
+      "ironia": 0.3258,
+      "implicita": 0.4124
+     },
+     "p_explore": 0.2488,
+     "p_sup": 0.5594,
+     "p_accept": 0.351,
+     "hesitacao_media_s": 2.109,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega",
+     "Prazo"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261048",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.043,
+    "latencia_llm_media_s": 0.91,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1227,
+      "ironia": 0.0159,
+      "implicita": 0.3433
+     },
+     "p_explore": 0.2829,
+     "p_sup": 0.7502,
+     "p_accept": 0.2817,
+     "hesitacao_media_s": 2.084,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261049",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 34.258,
+    "latencia_llm_media_s": 0.869,
+    "tokens": 2719,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.184,
+      "ironia": 0.0117,
+      "implicita": 0.2521
+     },
+     "p_explore": 0.3298,
+     "p_sup": 0.6033,
+     "p_accept": 0.2936,
+     "hesitacao_media_s": 1.929,
+     "k_desistencia": 9
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261050",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {},
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 30.974,
+    "latencia_llm_media_s": 0.875,
+    "tokens": 2728,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.3783,
+      "ironia": 0.0032,
+      "implicita": 0.2354
+     },
+     "p_explore": 0.2041,
+     "p_sup": 0.4905,
+     "p_accept": 0.2732,
+     "hesitacao_media_s": 1.594,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261051",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "injetor_exploracao": 1,
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 36.042,
+    "latencia_llm_media_s": 0.892,
+    "tokens": 2546,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.4305,
+      "ironia": 0.3471,
+      "implicita": 0.5649
+     },
+     "p_explore": 0.1627,
+     "p_sup": 0.4543,
+     "p_accept": 0.3219,
+     "hesitacao_media_s": 1.649,
+     "k_desistencia": 5
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261052",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1,
+     "filtro_leitura": 3,
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.53,
+    "latencia_llm_media_s": 0.841,
+    "tokens": 2498,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5712,
+      "ironia": 0.2468,
+      "implicita": 0.6451
+     },
+     "p_explore": 0.4743,
+     "p_sup": 0.4326,
+     "p_accept": 0.3782,
+     "hesitacao_media_s": 1.412,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": true,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261053",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1,
+     "injetor_exploracao": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 33.69,
+    "latencia_llm_media_s": 1.135,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.1023,
+      "ironia": 0.0986,
+      "implicita": 0.349
+     },
+     "p_explore": 0.3963,
+     "p_sup": 0.6076,
+     "p_accept": 0.1706,
+     "hesitacao_media_s": 1.09,
+     "k_desistencia": 6
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261054",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "aceite_prematuro": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 32.898,
+    "latencia_llm_media_s": 0.833,
+    "tokens": 2605,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "alta",
+     "p_lit": {
+      "metafora": 0.369,
+      "ironia": 0.0289,
+      "implicita": 0.1704
+     },
+     "p_explore": 0.2802,
+     "p_sup": 0.5012,
+     "p_accept": 0.3575,
+     "hesitacao_media_s": 1.641,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   },
+   {
+    "execucao_id": "C2_perfil_s20261055",
+    "sucesso": false,
+    "status": "encerrada",
+    "A": 4,
+    "A_excesso": 0,
+    "U_s": 0,
+    "ajudas": {},
+    "erros": {
+     "engano_interpretacao": 1,
+     "engano_avaliacao": 1
+    },
+    "oport": {
+     "interpretacao": 2,
+     "campo": 2,
+     "encerramento": 1
+    },
+    "mac": {
+     "Para mim está bom": 1
+    },
+    "ihc": {
+     "PA": 0,
+     "AL": 0,
+     "RA": 0,
+     "CE": 0,
+     "PP": 3
+    },
+    "mecanismos": {
+     "limiar_suporte": 1
+    },
+    "rejeitadas": 0,
+    "falhas": 0,
+    "tempo_simulado_s": 28.971,
+    "latencia_llm_media_s": 0.885,
+    "tokens": 2660,
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.498,
+      "ironia": 0.4063,
+      "implicita": 0.4129
+     },
+     "p_explore": 0.2345,
+     "p_sup": 0.6724,
+     "p_accept": 0.1727,
+     "hesitacao_media_s": 0.649,
+     "k_desistencia": 8
+    },
+    "filtro_ativo": false,
+    "campos_errados_fim": [
+     "Entrega"
+    ],
+    "campos_vazios_fim": []
+   }
+  ]
+ },
+ "klm": {
+  "C1": {
+   "tarefa": "C1",
+   "A_min": 3,
+   "tempo_klm_s": 17.81,
+   "passos": [
+    {
+     "passo": "enviar:Local",
+     "operadores": "MPBHKKKKKKKKKKKKKHPB",
+     "tempo_s": 8.19
+    },
+    {
+     "passo": "enviar:Horario",
+     "operadores": "MPBHKKKKKKKKKHPB",
+     "tempo_s": 7.07
+    },
+    {
+     "passo": "encerrar",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    }
+   ]
+  },
+  "C2": {
+   "tarefa": "C2",
+   "A_min": 4,
+   "tempo_klm_s": 27.36,
+   "passos": [
+    {
+     "passo": "rolar_historico",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    },
+    {
+     "passo": "enviar:Entrega",
+     "operadores": "MPBHKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKHPB",
+     "tempo_s": 15.19
+    },
+    {
+     "passo": "enviar:Prazo",
+     "operadores": "MPBHKKKKKKKKKHPB",
+     "tempo_s": 7.07
+    },
+    {
+     "passo": "encerrar",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    }
+   ]
+  },
+  "V1": {
+   "tarefa": "V1",
+   "A_min": 4,
+   "tempo_klm_s": 21.2,
+   "passos": [
+    {
+     "passo": "rolar_historico",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    },
+    {
+     "passo": "enviar:Local",
+     "operadores": "MPBHKKKKKKKKKKKKKKKKHPB",
+     "tempo_s": 9.03
+    },
+    {
+     "passo": "enviar:Prazo",
+     "operadores": "MPBHKKKKKKKKKHPB",
+     "tempo_s": 7.07
+    },
+    {
+     "passo": "encerrar",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    }
+   ]
+  },
+  "V2": {
+   "tarefa": "V2",
+   "A_min": 4,
+   "tempo_klm_s": 20.08,
+   "passos": [
+    {
+     "passo": "rolar_historico",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    },
+    {
+     "passo": "enviar:Prazo",
+     "operadores": "MPBHKKKKKKKKKKKKHPB",
+     "tempo_s": 7.91
+    },
+    {
+     "passo": "enviar:Formato",
+     "operadores": "MPBHKKKKKKKKKHPB",
+     "tempo_s": 7.07
+    },
+    {
+     "passo": "encerrar",
+     "operadores": "MPB",
+     "tempo_s": 2.55
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+  "versao": "roteiro-0.2",
+  "data_congelamento": "2026-11-19",
+  "nota": "Conteúdo exibido na tela (signos estáticos e dinâmicos). Não contém chave de sucesso. Os campos 'figura' e 'superficial' são propriedades do item lidas apenas pelo controlador de mecanismos; nunca entram na observação o_t.",
+  "tarefas": {
+    "C1": {
+      "conjunto": "calibracao",
+      "titulo": "Monitoria de Cálculo I",
+      "cartao": "Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.",
+      "campos": ["Local", "Horario"],
+      "distratores": 3,
+      "blocos": [
+        {
+          "id": "A",
+          "oculto": false,
+          "figura": null,
+          "texto": "A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.",
+          "superficial": null
+        }
+      ],
+      "reformulacao": "Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.",
+      "nova_pergunta": "Não tenho outra informação além da mensagem já exibida."
+    },
+    "C2": {
+      "conjunto": "calibracao",
+      "titulo": "Rascunho de IHC",
+      "cartao": "Descubra o que deve ser entregue no rascunho e até quando. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.",
+      "campos": ["Entrega", "Prazo"],
+      "distratores": 2,
+      "blocos": [
+        {
+          "id": "A",
+          "oculto": false,
+          "figura": "ironia",
+          "texto": "A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. A secretaria confirmou o prazo do rascunho: sexta, 18h. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.",
+          "superficial": "A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado."
+        },
+        {
+          "id": "B",
+          "oculto": true,
+          "figura": "metafora",
+          "texto": "O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.",
+          "superficial": "O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo."
+        }
+      ],
+      "reformulacao": "Entrega: uma ideia central e duas consequências. Prazo: sexta, 18h. A frase sobre segunda é ironia.",
+      "nova_pergunta": "Não tenho outra informação além da mensagem já exibida."
+    }
+  }
+}

@@ -1,0 +1,46 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\AtBeginDocument{\shorthandoff{"}}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\cod}[1]{{\ttfamily\def\_{\textunderscore\allowbreak}#1}}
+\renewcommand{\arraystretch}{1.08}
+
+\begin{document}
+\title{UX-Agent: Implementação de um Agente Proxy Baseado em LLM com Paridade de Signos, Mecanismos Fora do Prompt e Verificação Externa para um Chat de Estudo}
+
+\author{
+\IEEEauthorblockN{Matheus Emanuel da Silva}
+\IEEEauthorblockA{Engenharia de Computação\\CEFET MG, Campus Divinópolis\\matheus.silva@aluno.cefetmg.br}
+\and
+\IEEEauthorblockN{João Francisco Teles da Silva}
+\IEEEauthorblockA{Engenharia de Computação\\CEFET MG, Campus Divinópolis\\joao.silva.05@aluno.cefetmg.br}
+\and
+\IEEEauthorblockN{Eduardo Almeida}
+\IEEEauthorblockA{Engenharia de Computação\\CEFET MG, Campus Divinópolis\\eduardo.almeida@aluno.cefetmg.br}
+}
+\maketitle
+
+\begin{abstract}
+Agentes baseados em grandes modelos de linguagem que simulam participantes costumam encenar o perfil pelo prompt, recebem informação que a pessoa não teria e declaram o próprio sucesso. Este artigo relata a implementação do UX-Agent para um chat de estudo usado por uma persona de estudante universitária autista e mostra que decisões de design tornam os registros auditáveis. A tela humana e a observação textual do agente são geradas pela mesma função, garantindo paridade de signos; o diagrama MoLIC é a máquina de estados e restringe a resposta do modelo, por esquema JSON, às falas do usuário habilitadas em cada cena; cinco mecanismos de perfil, a hesitação e o limite de tentativas são sorteados com semente fora do prompt; a ajuda, em três estratos, só chega por ação registrada; e um verificador externo decide o sucesso pelo estado final. Rupturas de comunicação e mecanismos de prevenção e recuperação são detectados apenas por assinaturas no log. No piloto, com 120 sessões das tarefas de calibração e o modelo gpt-4o-mini, não houve proposta inválida nem falha técnica; a tarefa de localização teve sucesso total nas duas condições, e a tarefa com metáfora e ironia teve sucesso nulo também no comparador, o que revelou uma chave ambígua. O piloto também mostrou um mecanismo de suporte inoperante e a ausência de dispersão no comparador. O tempo simulado ficou de 22\% a 39\% acima da linha de base KLM. As tarefas de validação permanecem intocadas.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Interação humano-computador, agente baseado em LLM, MoLIC, paridade de signos, KLM.
+\end{IEEEkeywords}
+
+\input{E4_corpo_a}
+\input{E4_resultados}
+\input{E4_ameacas}
+\input{E4_conclusao}
+\input{E4_refs}
+
+\end{document}

@@ -1,0 +1,868 @@
+{
+ "meta": {
+  "execucao_id": "C1_perfil_s20261039",
+  "persona_id": "E",
+  "tarefa_id": "C1",
+  "conjunto": "calibracao",
+  "condicao": "perfil",
+  "config_id": "65c762cc667f",
+  "semente": 20261039,
+  "origem": "sintetica",
+  "modelo": "openai:gpt-4o-mini",
+  "versao_theta": "theta-0.2",
+  "versao_roteiro": "roteiro-0.2",
+  "hash_prompt": "dbddc2e2e2e3",
+  "prompt_sistema": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido.",
+  "instrucao_protocolo": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações."
+ },
+ "eventos": [
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 0,
+   "timestamp": "2026-11-22T17:04:10.238+00:00",
+   "tipo": "sessao_iniciada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": "d_mostra_cartao",
+   "dados": {
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.6977,
+      "ironia": 0.4076,
+      "implicita": 0.3885
+     },
+     "p_explore": 0.3721,
+     "p_sup": 0.902,
+     "p_accept": 0.3703,
+     "hesitacao_media_s": 1.35,
+     "k_desistencia": 9
+    },
+    "filtro_leitura": {}
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.238+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.238+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "injetor_exploracao",
+    "removidas": [
+     "enviar",
+     "encerrar"
+    ],
+    "p": 0.3721
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.238+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo",
+    "falas_permitidas": [
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "reformular",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "reformular",
+     "campo": null,
+     "texto": null
+    },
+    "bruto": "{\"acao\":\"reformular\",\"campo\":null,\"texto\":null}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\n(nenhuma ação ainda)\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.604,
+    "uso": {
+     "prompt_tokens": 492,
+     "completion_tokens": 14,
+     "total_tokens": 506,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_8656e4f1df"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "reformular",
+   "resposta": "d_reformulacao",
+   "dados": {
+    "campo": null,
+    "texto": null,
+    "campos_antes": {
+     "Local": "",
+     "Horario": ""
+    },
+    "campos_depois": {
+     "Local": "",
+     "Horario": ""
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 2.55,
+    "hesitacao_s": 2.093,
+    "tempo_simulado_acumulado_s": 4.643,
+    "acoes": 1
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "ajuda_solicitada",
+   "cena": "conversa",
+   "fala": "reformular",
+   "resposta": "d_reformulacao",
+   "dados": {
+    "tipo_ajuda": "significado"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 1,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Local": "",
+     "Horario": ""
+    },
+    "revelados": [
+     "A"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 2,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 2,
+   "timestamp": "2026-11-22T17:04:10.842+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 2,
+   "timestamp": "2026-11-22T17:04:11.616+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "enviar",
+     "campo": "Local",
+     "texto": "laboratório 3"
+    },
+    "bruto": "{\"acao\":\"enviar\",\"campo\":\"Local\",\"texto\":\"laboratório 3\"}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: reformular -> exibe a mensagem em lista literal\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: (vazio) | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.773,
+    "uso": {
+     "prompt_tokens": 593,
+     "completion_tokens": 17,
+     "total_tokens": 610,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_8656e4f1df"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 2,
+   "timestamp": "2026-11-22T17:04:11.616+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": "d_campo_preenchido",
+   "dados": {
+    "campo": "Local",
+    "texto": "laboratório 3",
+    "campos_antes": {
+     "Local": "",
+     "Horario": ""
+    },
+    "campos_depois": {
+     "Local": "laboratório 3",
+     "Horario": ""
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B",
+     "H",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "H",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 8.19,
+    "hesitacao_s": 1.487,
+    "tempo_simulado_acumulado_s": 14.32,
+    "acoes": 2
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 2,
+   "timestamp": "2026-11-22T17:04:11.616+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Local": "laboratório 3",
+     "Horario": ""
+    },
+    "revelados": [
+     "A"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 3,
+   "timestamp": "2026-11-22T17:04:11.616+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 3,
+   "timestamp": "2026-11-22T17:04:11.616+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 3,
+   "timestamp": "2026-11-22T17:04:12.405+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "enviar",
+     "campo": "Horario",
+     "texto": "terças, 14h"
+    },
+    "bruto": "{\"acao\":\"enviar\",\"campo\":\"Horario\",\"texto\":\"terças, 14h\"}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: reformular -> exibe a mensagem em lista literal\npasso 2: enviar(campo=Local, texto=\"laboratório 3\") -> mostra o campo com o texto enviado\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.789,
+    "uso": {
+     "prompt_tokens": 637,
+     "completion_tokens": 19,
+     "total_tokens": 656,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_8656e4f1df"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 3,
+   "timestamp": "2026-11-22T17:04:12.405+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": "d_campo_preenchido",
+   "dados": {
+    "campo": "Horario",
+    "texto": "terças, 14h",
+    "campos_antes": {
+     "Local": "laboratório 3",
+     "Horario": ""
+    },
+    "campos_depois": {
+     "Local": "laboratório 3",
+     "Horario": "terças, 14h"
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B",
+     "H",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "H",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 7.63,
+    "hesitacao_s": 0.962,
+    "tempo_simulado_acumulado_s": 22.912,
+    "acoes": 3
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 3,
+   "timestamp": "2026-11-22T17:04:12.405+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Local": "laboratório 3",
+     "Horario": "terças, 14h"
+    },
+    "revelados": [
+     "A"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:12.405+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: \"terças, 14h\"\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\n  [Sistema] Campo Horario preenchido: \"terças, 14h\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:12.405+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: \"terças, 14h\"\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\n  [Sistema] Campo Horario preenchido: \"terças, 14h\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:13.155+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "encerrar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "encerrar",
+     "campo": null,
+     "texto": null
+    },
+    "bruto": "{\"acao\":\"encerrar\",\"campo\":null,\"texto\":null}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: reformular -> exibe a mensagem em lista literal\npasso 2: enviar(campo=Local, texto=\"laboratório 3\") -> mostra o campo com o texto enviado\npasso 3: enviar(campo=Horario, texto=\"terças, 14h\") -> mostra o campo com o texto enviado\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra onde e quando é a monitoria de Cálculo I. Preencha Local e Horário. Quando estiver como você quer, encerre.\nCAMPOS DE RESPOSTA: Local: \"laboratório 3\" | Horario: \"terças, 14h\"\nHISTÓRICO DO CHAT:\n  [Chat] A monitoria de Cálculo I é no laboratório 3, às terças, 14h. A biblioteca fecha mais cedo na sexta, o grupo de Física mudou para quinta e a cantina abre às 7h.\n  [Chat] Monitoria de Cálculo I: laboratório 3, terças, 14h. As outras frases não são sobre a monitoria.\n  [Sistema] Campo Local preenchido: \"laboratório 3\".\n  [Sistema] Campo Horario preenchido: \"terças, 14h\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Local, Horario; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Nova pergunta\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.75,
+    "uso": {
+     "prompt_tokens": 688,
+     "completion_tokens": 14,
+     "total_tokens": 702,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_8656e4f1df"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:13.156+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "encerrar",
+   "resposta": "d_encerra",
+   "dados": {
+    "campo": null,
+    "texto": null,
+    "campos_antes": {
+     "Local": "laboratório 3",
+     "Horario": "terças, 14h"
+    },
+    "campos_depois": {
+     "Local": "laboratório 3",
+     "Horario": "terças, 14h"
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 2.55,
+    "hesitacao_s": 1.956,
+    "tempo_simulado_acumulado_s": 27.418,
+    "acoes": 4
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:13.156+00:00",
+   "tipo": "estado_interface",
+   "cena": "encerrada",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "encerrada",
+    "campos": {
+     "Local": "laboratório 3",
+     "Horario": "terças, 14h"
+    },
+    "revelados": [
+     "A"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "persona_id": "E",
+   "tarefa_id": "C1",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "65c762cc667f",
+   "semente": 20261039,
+   "passo": 4,
+   "timestamp": "2026-11-22T17:04:13.156+00:00",
+   "tipo": "encerrada",
+   "cena": "encerrada",
+   "fala": null,
+   "resposta": "d_encerra",
+   "dados": {},
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C1_perfil_s20261039",
+   "tipo": "avaliacao_externa",
+   "timestamp": "2026-11-22T17:10:01.085+00:00",
+   "origem": "verificador",
+   "dados": {
+    "sucesso": true,
+    "status": "encerrada",
+    "campos_ok": {
+     "Local": true,
+     "Horario": true
+    }
+   }
+  }
+ ],
+ "estado_final": {
+  "tarefa_id": "C1",
+  "status": "encerrada",
+  "campos": {
+   "Local": "laboratório 3",
+   "Horario": "terças, 14h"
+  },
+  "acoes": 4,
+  "cena": "encerrada",
+  "tempo_simulado_s": 27.418
+ }
+}

@@ -1,0 +1,41 @@
+\section{Piloto}
+\subsection{Execução}
+Foram 120 sessões em 22/11/2026: C1 e C2, condições perfil (mecanismos ligados) e comparador (desligados), 30 execuções cada, sementes 20261026 a 20261055, modelo devolvido pela API \cod{gpt-4o-mini-2024-07-18}. Não houve proposta rejeitada nem falha técnica. Foram 282.403 tokens no total, com latência mediana de 0,74 a 0,91\,s por passo, registrada à parte do tempo simulado. V1 e V2 não foram abertas. Dois executores de regra (resposta canônica e resposta errada) confirmaram antes o verificador: 2/2 e 0/2 sucessos.
+
+\subsection{Métricas}
+A Tabela~\ref{tab:res} resume as métricas por tarefa e condição. $S$ é a taxa de sucesso dada pelo verificador; $R_{e,\text{interp}}$ é a fração de oportunidades de figura com engano de interpretação; $R_{e,\text{aval}}$ é a fração de sessões encerradas com campo fora da chave; $A$ é o número de ações executadas; $U_s$ é a fração de sessões com ajuda de significado.
+
+\begin{table}[t]
+\caption{Resultados do piloto (n = 30 por célula).}
+\label{tab:res}
+\centering\footnotesize
+\begin{tabularx}{\columnwidth}{@{}lLLLL@{}}
+\toprule
+ & C1 comp. & C1 perfil & C2 comp. & C2 perfil\\
+\midrule
+$S$ & 1,00 & 1,00 & 0,00 & 0,00\\
+$R_{e,\text{interp}}$ & -- & -- & 0,50 & 0,57\\
+$R_{e,\text{aval}}$ & 0,00 & 0,00 & 1,00 & 1,00\\
+$A$ mediana (faixa) & 3 (3--3) & 3 (3--4) & 4 (4--4) & 4 (4--5)\\
+$A_{\min}$ (HTA/KLM) & 3 & 3 & 4 & 4\\
+$U_s$ (sessões) & 0,00 & 0,47 & 0,00 & 0,00\\
+$T_{\text{sim}}$ mediano (s) & 22,8 & 24,8 & 33,3 & 34,8\\
+$T_{\text{KLM}}$ (s) & 17,8 & 17,8 & 27,4 & 27,4\\
+$T_{\text{sim}}/T_{\text{KLM}}$ & 1,28 & 1,39 & 1,22 & 1,27\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{C1.} As duas condições tiveram sucesso em todas as sessões. No comparador as 30 sessões seguiram exatamente o caminho mínimo da HTA (enviar, enviar, encerrar). No perfil, o injetor de exploração disparou em 14 sessões e, nas 14, o agente usou \cod{reformular} antes do primeiro envio (assinatura ``O que é isto?''), elevando $A$ para 4. O aceite prematuro disparou em 2 sessões sem efeito no resultado.
+
+\emph{C2.} Nenhuma sessão teve sucesso. No comparador, as 30 sessões preencheram Prazo corretamente (``sexta, 18h'') e Entrega com ``rascunho do texto individual'', fora da chave (``ideia central'' e ``duas consequências''), e encerraram: 30 enganos de avaliação (``Para mim está bom''). No perfil, o filtro de leitura disparou na ironia em 9 sessões e, nas 9, Prazo recebeu ``segunda'', como previsto por R1. Nas 5 dessas sessões em que só a ironia foi filtrada, Entrega ficou correta: sem a frase ``a secretaria confirmou o prazo do rascunho'', o agente deixou de ancorar Entrega em ``rascunho''. O limiar de suporte disparou em 18 sessões, mas o agente escolheu \cod{rolar\_historico} em todas, e o botão de explicação nunca foi usado.
+
+\emph{Tempo.} O tempo simulado ficou de 22\% a 39\% acima do KLM. O excesso vem da hesitação sorteada e, no perfil, das ações extras; o KLM não inclui leitura.
+
+\subsection{O que o piloto depurou}
+O piloto cumpriu sua função de depurar o protocolo antes da validação \cite{lara2026p3}. Quatro achados mudam a próxima rodada de calibração.
+(i) \emph{Chave de C2 ambígua.} ``Texto individual'' é uma resposta defensável a ``o que deve ser entregue'', e o comparador fica em $S=0$; com piso no comparador, C2 não discrimina condições. A chave ou o cartão de C2 precisa ser revista, o que é permitido por ser tarefa de calibração; V1 e V2 continuam congeladas.
+(ii) \emph{R3 inoperante.} Retirar \cod{enviar} e \cod{encerrar} não leva ao suporte quando \cod{rolar\_historico} está disponível; a regra deve atuar só depois de o bloco oculto ser revelado.
+(iii) \emph{Confusão entre R2 e ajuda.} Em C1, todo uso de ajuda veio do injetor de exploração; $U_s$ deve ser relatado separando os passos com \cod{restricao\_aplicada}.
+(iv) \emph{Comparador sem dispersão.} Com temperatura 0 e observação idêntica, as 30 sessões do comparador foram iguais; a variabilidade só vem dos mecanismos. Isso confirma o risco de homogeneização apontado por \cite{wang2025} e indica que a variação deve ser modelada explicitamente.
+Por fim, todas as métricas puderam ser calculadas a partir do log, com denominador definido e sem sessões incompletas.

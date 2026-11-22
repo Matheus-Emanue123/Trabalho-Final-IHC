@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+dados/humano/
+docs/*.aux
+docs/*.log
+docs/*.out
