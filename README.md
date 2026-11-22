@@ -22,7 +22,7 @@ Autores: Matheus Emanuel da Silva, João Francisco Teles da Silva, Eduardo Almei
 Requer apenas Python 3.10+ (biblioteca padrão; sem `pip install`).
 
 ```bash
-git clone <url-do-repositorio> && cd uxagent
+git clone https://github.com/Matheus-Emanue123/Trabalho-Final-IHC.git && cd Trabalho-Final-IHC
 cp .env.example .env      # coloque OPENAI_API_KEY no .env
 ```
 
