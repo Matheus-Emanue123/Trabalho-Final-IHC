@@ -33,6 +33,8 @@ button{font:inherit;padding:7px 12px;margin:3px;border-radius:6px;border:1px sol
 button.pri{background:var(--acc);color:#fff;border-color:var(--acc)} input{font:inherit;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:60%}
 .alerta{color:var(--warn);font-weight:600} pre{white-space:pre-wrap;font-size:12.5px;background:var(--bg);padding:10px;border-radius:6px;border:1px solid var(--line)}
 .campo{margin:6px 0} label{display:inline-block;width:80px;font-weight:600}
+a{color:var(--acc)} table{border-collapse:collapse;width:100%;font-size:14px} td,th{border-bottom:1px solid var(--line);padding:5px 8px;text-align:left}
+.ok{color:#2e8b57;font-weight:600} .no{color:#c0392b;font-weight:600} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
 """
 
 
@@ -75,7 +77,7 @@ def render_tela(estado):
     cls = "alerta" if t["alerta_acoes"] else "sis"
     h.append(f"<p class='{cls}'>Ações restantes: {t['acoes_restantes']} de 12</p>")
     if t["status"] != "em_andamento":
-        h.append(f"<p><b>Status: {t['status']}</b>. Log salvo. <a href='/'>Nova sessão</a></p>")
+        h.append(f"<p><b>Status: {t['status']}</b>. Log salvo. <a href='/?inicio=1'>Voltar ao início</a></p>")
     return "\n".join(h)
 
 
@@ -98,18 +100,44 @@ class Handler(BaseHTTPRequestHandler):
             tarefa = q.get("tarefa", [None])[0]
             if tarefa and tarefa in ("C1", "C2"):
                 self.nova(tarefa)
-            if "estado" not in SESSAO:
-                arqs = sorted((RAIZ / "dados" / "piloto").glob("*.json"))
-                links = "".join(f"<li><a href='/replay?arquivo={a.name}'>{a.name}</a></li>" for a in arqs[:400])
-                return self._ok(pagina("UX-Agent", "<div class='box'><h1>UX-Agent: chat de estudo</h1>"
-                                       "<p>Sessão humana: <a href='/?tarefa=C1'>C1</a> · <a href='/?tarefa=C2'>C2</a> "
-                                       "(V1 e V2 bloqueadas)</p><h2>Sessões do agente</h2><ul>" + links + "</ul></div>"))
+            if "estado" not in SESSAO or q.get("inicio"):
+                SESSAO.clear()
+                return self._ok(pagina("UX-Agent", self.inicio()))
             est = SESSAO["estado"]
             o_t, _ = traduzir(est.tela(), molic.falas_habilitadas(est), est.item["campos"], None)
             corpo = (f"<div class='wrap'><div class='box'>{render_tela(est)}</div>"
-                     f"<div class='box'><h1>O que o agente receberia (o_t)</h1><pre>{html.escape(o_t)}</pre></div></div>")
+                     f"<div class='box'><p><a href='/?inicio=1'>← Início</a></p><h1>O que o agente receberia (o_t)</h1><pre>{html.escape(o_t)}</pre></div></div>")
             return self._ok(pagina("Chat de estudo", corpo))
         self.send_error(404)
+
+    def inicio(self):
+        grupos = {}
+        for a in sorted((RAIZ / "dados" / "piloto").glob("*.json")):
+            d = json.loads(a.read_text(encoding="utf-8"))
+            av = [e for e in d["eventos"] if e["tipo"] == "avaliacao_externa"]
+            ok = av[-1]["dados"]["sucesso"] if av else None
+            mecs = sorted({e["dados"].get("mecanismo") for e in d["eventos"] if e["tipo"] == "restricao_aplicada"})
+            chave = (d["meta"]["tarefa_id"], d["meta"]["condicao"])
+            grupos.setdefault(chave, []).append((a.name, d["meta"]["semente"], ok, d["estado_final"]["acoes"], mecs))
+        blocos = []
+        for (t, c), linhas in sorted(grupos.items()):
+            n_ok = sum(1 for x in linhas if x[2])
+            rot = "persona E. (mecanismos ligados)" if c == "perfil" else "agente neutro (mecanismos desligados)"
+            tr = "".join(
+                f"<tr><td><a href='/replay?arquivo={nome}'>semente {s}</a></td>"
+                f"<td class='{'ok' if ok else 'no'}'>{'sucesso' if ok else 'falha'}</td><td>{ac}</td>"
+                f"<td>{html.escape(', '.join(m) or '—')}</td></tr>" for nome, s, ok, ac, m in linhas)
+            blocos.append(f"<div class='box'><h2>{t} · {rot}</h2><p>{n_ok} de {len(linhas)} com sucesso no verificador</p>"
+                          f"<details><summary>ver as {len(linhas)} sessões</summary><table><tr><th>Sessão</th><th>Verificador</th>"
+                          f"<th>Ações</th><th>Mecanismos que dispararam</th></tr>{tr}</table></details></div>")
+        return ("<div class='box'><h1>UX-Agent: chat de estudo instrumentado</h1>"
+                "<p><b>1. Sessão humana.</b> Use o chat como a estudante usaria. À direita aparece o texto exato que o "
+                "agente receberia na mesma tela (paridade de signos). Tarefas: <a href='/?tarefa=C1'>C1 — monitoria</a> · "
+                "<a href='/?tarefa=C2'>C2 — rascunho (metáfora e ironia)</a>. V1 e V2 estão congeladas e não abrem.</p>"
+                "<p><b>2. Sessões do agente.</b> Os 120 registros do piloto com o gpt-4o-mini. Clique numa sessão para ver, passo a "
+                "passo, o que o agente recebeu, os mecanismos que agiram, a resposta do LLM e o veredito do verificador externo. "
+                "Sugestão para o vídeo: <a href='/replay?arquivo=C2_perfil_s20261028.json'>C2, persona, semente 20261028</a> (o filtro de ironia disparou: o Prazo sai “segunda” e o verificador marca falha).</p></div>"
+                "<div class='grid'>" + "".join(blocos) + "</div>")
 
     def nova(self, tarefa):
         item = carregar_tarefa(tarefa)
@@ -176,7 +204,7 @@ class Handler(BaseHTTPRequestHandler):
             elif tp == "avaliacao_externa":
                 h.append(f"<h2>Verificador externo</h2><pre>{e(json.dumps(ev['dados'], ensure_ascii=False, indent=1))}</pre>")
         h.append(f"<h2>Estado final</h2><pre>{e(json.dumps(d['estado_final'], ensure_ascii=False, indent=1))}</pre>"
-                 "<p><a href='/'>Voltar</a></p></div>")
+                 "<p><a href='/?inicio=1'>Voltar ao início</a></p></div>")
         return pagina("Replay", "".join(h))
 
 
