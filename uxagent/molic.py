@@ -20,7 +20,7 @@ FALAS_U = {
                         "descricao": "rolar o histórico para ver o restante da mensagem"},
     "reformular": {"cena": CONVERSA, "rotulo": "Explicar/reformular",
                    "descricao": "pedir que a última mensagem seja explicada em lista"},
-    "nova_pergunta": {"cena": CONVERSA, "rotulo": "Nova pergunta",
+    "nova_pergunta": {"cena": CONVERSA, "rotulo": "Perguntar de novo",
                       "descricao": "perguntar de novo ao chat"},
     "ajuda_como_fazer": {"cena": CONVERSA, "rotulo": "Ajuda: como faço?",
                          "descricao": "abrir a ajuda sobre como usar esta tela"},

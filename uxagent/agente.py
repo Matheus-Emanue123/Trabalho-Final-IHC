@@ -16,7 +16,7 @@ PROMPT_SISTEMA = ("Você opera um chat de estudo. Complete o objetivo do cartão
                   "ação fora da lista. Responda apenas com o JSON pedido.")
 
 INSTRUCAO_PROTOCOLO = ("Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use "
-                       "Enviar, Explicar/reformular, Nova pergunta e Encerrar. O limite é de 12 ações.")
+                       "Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações.")
 
 
 def carregar_env(caminho=".env"):

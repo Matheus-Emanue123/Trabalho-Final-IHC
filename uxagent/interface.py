@@ -1,4 +1,4 @@
-"""Aplicação interativa: chat de estudo roteirizado (roteiro-0.2).
+"""Aplicação interativa: chat de estudo roteirizado (roteiro-0.3).
 
 O estado integral (`EstadoInterface`) é a única fonte da tela humana e da
 observação do agente. O verificador externo lê só `estado_final()`.

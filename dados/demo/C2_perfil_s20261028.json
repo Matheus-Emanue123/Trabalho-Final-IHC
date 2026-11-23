@@ -1,0 +1,980 @@
+{
+ "meta": {
+  "execucao_id": "C2_perfil_s20261028",
+  "persona_id": "E",
+  "tarefa_id": "C2",
+  "conjunto": "calibracao",
+  "condicao": "perfil",
+  "config_id": "9a3425434f0b",
+  "semente": 20261028,
+  "origem": "sintetica",
+  "modelo": "openai:gpt-4o-mini",
+  "versao_theta": "theta-0.2",
+  "versao_roteiro": "roteiro-0.3",
+  "hash_prompt": "43da2d99253e",
+  "prompt_sistema": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido.",
+  "instrucao_protocolo": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações."
+ },
+ "eventos": [
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 0,
+   "timestamp": "2026-11-23T01:13:51.692+00:00",
+   "tipo": "sessao_iniciada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": "d_mostra_cartao",
+   "dados": {
+    "amostra": {
+     "condicao": "perfil",
+     "h": "media",
+     "p_lit": {
+      "metafora": 0.5234,
+      "ironia": 0.3674,
+      "implicita": 0.625
+     },
+     "p_explore": 0.3813,
+     "p_sup": 0.5167,
+     "p_accept": 0.2247,
+     "hesitacao_media_s": 0.784,
+     "k_desistencia": 7
+    },
+    "filtro_leitura": {
+     "A": true,
+     "B": false
+    }
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:52.113+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. A secretaria confirmou o prazo do rascunho: sexta, 18h. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  (A mensagem continua abaixo. Use \"Rolar histórico\" para ver o restante.)\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - rolar_historico: botão \"Rolar histórico\" — rolar o histórico para ver o restante da mensagem\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "rolar_historico",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:52.114+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "injetor_exploracao",
+    "removidas": [
+     "enviar",
+     "encerrar"
+    ],
+    "p": 0.3813
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:52.114+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "filtro_leitura",
+    "bloco": "A"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:52.114+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  (A mensagem continua abaixo. Use \"Rolar histórico\" para ver o restante.)\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - rolar_historico: botão \"Rolar histórico\" — rolar o histórico para ver o restante da mensagem\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo",
+    "falas_permitidas": [
+     "rolar_historico",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "rolar_historico",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "rolar_historico",
+     "campo": null,
+     "texto": null
+    },
+    "bruto": "{\"acao\":\"rolar_historico\",\"campo\":null,\"texto\":null}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\n(nenhuma ação ainda)\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  (A mensagem continua abaixo. Use \"Rolar histórico\" para ver o restante.)\nAÇÕES RESTANTES: 12 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - rolar_historico: botão \"Rolar histórico\" — rolar o histórico para ver o restante da mensagem\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 1.15,
+    "uso": {
+     "prompt_tokens": 554,
+     "completion_tokens": 17,
+     "total_tokens": 571,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_fe5dc95ec4"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "rolar_historico",
+   "resposta": "d_revela_bloco",
+   "dados": {
+    "campo": null,
+    "texto": null,
+    "campos_antes": {
+     "Entrega": "",
+     "Prazo": ""
+    },
+    "campos_depois": {
+     "Entrega": "",
+     "Prazo": ""
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 2.55,
+    "hesitacao_s": 2.499,
+    "tempo_simulado_acumulado_s": 5.049,
+    "acoes": 1
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 1,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Entrega": "",
+     "Prazo": ""
+    },
+    "revelados": [
+     "A",
+     "B"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. A secretaria confirmou o prazo do rascunho: sexta, 18h. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "filtro_leitura",
+    "bloco": "A"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:53.264+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:54.088+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "enviar",
+     "campo": "Entrega",
+     "texto": "segunda-feira após a aula"
+    },
+    "bruto": "{\"acao\":\"enviar\",\"campo\":\"Entrega\",\"texto\":\"segunda-feira após a aula\"}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: rolar_historico -> exibe o restante da mensagem (bloco B)\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: (vazio) | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\nAÇÕES RESTANTES: 11 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.823,
+    "uso": {
+     "prompt_tokens": 620,
+     "completion_tokens": 18,
+     "total_tokens": 638,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_e7d4fdcd1d"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:54.088+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": "d_campo_preenchido",
+   "dados": {
+    "campo": "Entrega",
+    "texto": "segunda-feira após a aula",
+    "campos_antes": {
+     "Entrega": "",
+     "Prazo": ""
+    },
+    "campos_depois": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": ""
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B",
+     "H",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "H",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 11.55,
+    "hesitacao_s": 2.994,
+    "tempo_simulado_acumulado_s": 19.593,
+    "acoes": 2
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 2,
+   "timestamp": "2026-11-23T01:13:54.088+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": ""
+    },
+    "revelados": [
+     "A",
+     "B"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.089+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. A secretaria confirmou o prazo do rascunho: sexta, 18h. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.089+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "aceite_prematuro",
+    "removidas": [
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "nova_pergunta",
+     "reformular"
+    ],
+    "p": 0.2247
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.089+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "filtro_leitura",
+    "bloco": "A"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.089+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.907+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "enviar",
+     "campo": "Prazo",
+     "texto": "até sexta-feira"
+    },
+    "bruto": "{\"acao\":\"enviar\",\"campo\":\"Prazo\",\"texto\":\"até sexta-feira\"}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: rolar_historico -> exibe o restante da mensagem (bloco B)\npasso 2: enviar(campo=Entrega, texto=\"segunda-feira após a aula\") -> mostra o campo com o texto enviado\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: (vazio)\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\nAÇÕES RESTANTES: 10 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.818,
+    "uso": {
+     "prompt_tokens": 552,
+     "completion_tokens": 17,
+     "total_tokens": 569,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_d932b185f7"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.908+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "enviar",
+   "resposta": "d_campo_preenchido",
+   "dados": {
+    "campo": "Prazo",
+    "texto": "até sexta-feira",
+    "campos_antes": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": ""
+    },
+    "campos_depois": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": "até sexta-feira"
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B",
+     "H",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "K",
+     "H",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 8.75,
+    "hesitacao_s": 0.655,
+    "tempo_simulado_acumulado_s": 28.998,
+    "acoes": 3
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 3,
+   "timestamp": "2026-11-23T01:13:54.908+00:00",
+   "tipo": "estado_interface",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "em_andamento",
+    "campos": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": "até sexta-feira"
+    },
+    "revelados": [
+     "A",
+     "B"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:54.908+00:00",
+   "tipo": "observacao_exposta",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: \"até sexta-feira\"\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. A secretaria confirmou o prazo do rascunho: sexta, 18h. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\n  [Sistema] Campo Prazo preenchido: \"até sexta-feira\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_habilitadas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:54.908+00:00",
+   "tipo": "restricao_aplicada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "mecanismo": "filtro_leitura",
+    "bloco": "A"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:54.908+00:00",
+   "tipo": "observacao_transformada",
+   "cena": "conversa",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "texto": "TELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: \"até sexta-feira\"\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\n  [Sistema] Campo Prazo preenchido: \"até sexta-feira\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa",
+    "falas_permitidas": [
+     "enviar",
+     "reformular",
+     "nova_pergunta",
+     "ajuda_como_fazer",
+     "ajuda_corrigir",
+     "encerrar"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:55.679+00:00",
+   "tipo": "acao_proposta",
+   "cena": "conversa",
+   "fala": "encerrar",
+   "resposta": null,
+   "dados": {
+    "proposta": {
+     "acao": "encerrar",
+     "campo": null,
+     "texto": null
+    },
+    "bruto": "{\"acao\":\"encerrar\",\"campo\":null,\"texto\":null}",
+    "mensagens": [
+     {
+      "role": "system",
+      "content": "Você opera um chat de estudo. Complete o objetivo do cartão. Escolha uma ação da lista recebida. Se a ação for enviar, escreva o campo e o texto. Não invente ação fora da lista. Responda apenas com o JSON pedido."
+     },
+     {
+      "role": "user",
+      "content": "Use o chat para completar uma tarefa acadêmica curta. Leia o cartão. Use Enviar, Explicar/reformular, Perguntar de novo e Encerrar. O limite é de 12 ações.\n\nSUAS AÇÕES ANTERIORES NESTA TAREFA:\npasso 1: rolar_historico -> exibe o restante da mensagem (bloco B)\npasso 2: enviar(campo=Entrega, texto=\"segunda-feira após a aula\") -> mostra o campo com o texto enviado\npasso 3: enviar(campo=Prazo, texto=\"até sexta-feira\") -> mostra o campo com o texto enviado\n\nTELA ATUAL:\nTELA: Chat de estudo\nCARTÃO DA TAREFA: Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.\nCAMPOS DE RESPOSTA: Entrega: \"segunda-feira após a aula\" | Prazo: \"até sexta-feira\"\nHISTÓRICO DO CHAT:\n  [Chat] A disciplina pede um texto individual. A sala 12 está em reforma na quinta e o grupo de estudos continua na biblioteca. Deixar para segunda depois da aula? Ótimo, é exatamente o que foi combinado.\n  [Chat] O que entra na avaliação é o miolo do texto: ele precisa caber num guardanapo, isto é, uma ideia central e duas consequências, sem trazer o artigo inteiro.\n  [Sistema] Campo Entrega preenchido: \"segunda-feira após a aula\".\n  [Sistema] Campo Prazo preenchido: \"até sexta-feira\".\nAÇÕES RESTANTES: 9 de 12\nAÇÕES DISPONÍVEIS AGORA:\n  - enviar: botão \"Enviar\" — enviar um texto para um dos campos de resposta (escolha o campo entre: Entrega, Prazo; escreva o texto)\n  - reformular: botão \"Explicar/reformular\" — pedir que a última mensagem seja explicada em lista\n  - nova_pergunta: botão \"Perguntar de novo\" — perguntar de novo ao chat\n  - ajuda_como_fazer: botão \"Ajuda: como faço?\" — abrir a ajuda sobre como usar esta tela\n  - ajuda_corrigir: botão \"Ajuda: como corrijo?\" — abrir a ajuda sobre como corrigir um campo\n  - encerrar: botão \"Encerrar\" — encerrar a tarefa\n\nEscolha a próxima ação. Responda em JSON com as chaves acao, campo e texto (use null em campo e texto quando a ação não for enviar)."
+     }
+    ],
+    "modelo_devolvido": "gpt-4o-mini-2024-07-18",
+    "latencia_llm_s": 0.771,
+    "uso": {
+     "prompt_tokens": 711,
+     "completion_tokens": 14,
+     "total_tokens": 725,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "system_fingerprint": "fp_e7d4fdcd1d"
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:55.679+00:00",
+   "tipo": "acao_executada",
+   "cena": "conversa",
+   "fala": "encerrar",
+   "resposta": "d_encerra",
+   "dados": {
+    "campo": null,
+    "texto": null,
+    "campos_antes": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": "até sexta-feira"
+    },
+    "campos_depois": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": "até sexta-feira"
+    },
+    "operadores_klm": [
+     "M",
+     "P",
+     "B"
+    ],
+    "tempo_operadores_s": 2.55,
+    "hesitacao_s": 0.824,
+    "tempo_simulado_acumulado_s": 32.372,
+    "acoes": 4
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:55.679+00:00",
+   "tipo": "estado_interface",
+   "cena": "encerrada",
+   "fala": null,
+   "resposta": null,
+   "dados": {
+    "status": "encerrada",
+    "campos": {
+     "Entrega": "segunda-feira após a aula",
+     "Prazo": "até sexta-feira"
+    },
+    "revelados": [
+     "A",
+     "B"
+    ]
+   },
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "persona_id": "E",
+   "tarefa_id": "C2",
+   "conjunto": "calibracao",
+   "condicao": "perfil",
+   "config_id": "9a3425434f0b",
+   "semente": 20261028,
+   "passo": 4,
+   "timestamp": "2026-11-23T01:13:55.679+00:00",
+   "tipo": "encerrada",
+   "cena": "encerrada",
+   "fala": null,
+   "resposta": "d_encerra",
+   "dados": {},
+   "origem": "sintetica",
+   "modelo": "openai:gpt-4o-mini"
+  },
+  {
+   "execucao_id": "C2_perfil_s20261028",
+   "tipo": "avaliacao_externa",
+   "timestamp": "2026-11-23T01:13:55.699+00:00",
+   "origem": "verificador",
+   "dados": {
+    "sucesso": false,
+    "status": "encerrada",
+    "campos_ok": {
+     "Entrega": false,
+     "Prazo": false
+    }
+   }
+  }
+ ],
+ "estado_final": {
+  "tarefa_id": "C2",
+  "status": "encerrada",
+  "campos": {
+   "Entrega": "segunda-feira após a aula",
+   "Prazo": "até sexta-feira"
+  },
+  "acoes": 4,
+  "cena": "encerrada",
+  "tempo_simulado_s": 32.372
+ }
+}

@@ -1,5 +1,5 @@
 {
-  "versao": "roteiro-0.2",
+  "versao": "roteiro-0.3",
   "data_congelamento": "2026-11-19",
   "nota": "TAREFAS DE VALIDAÇÃO CONGELADAS. Não executar no piloto nem usar para ajustar prompt ou parâmetros. O executor recusa este arquivo sem a opção --validacao-congelada.",
   "tarefas": {

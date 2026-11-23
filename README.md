@@ -43,7 +43,11 @@ python -m analista.analisar dados/piloto
 # Linha de base KLM de especialista
 python -m analista.klm
 
-# Tela humana e reprodução passo a passo das sessões (demonstração)
+# Demonstração ao vivo de uma execução completa, narrada no terminal (vídeo E5)
+python -m uxagent.demo                       # C2, persona, semente 20261046; Enter avança cada passo
+python -m uxagent.demo --tarefa C1 --auto    # sem pausas
+
+# Tela humana e reprodução passo a passo das sessões
 python -m uxagent.web      # http://localhost:8765
 ```
 

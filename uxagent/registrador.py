@@ -12,12 +12,13 @@ TIPOS = {
 
 
 class Registrador:
-    def __init__(self, meta, pasta):
+    def __init__(self, meta, pasta, ao_evento=None):
         self.meta = meta
         self.pasta = Path(pasta)
         self.pasta.mkdir(parents=True, exist_ok=True)
         self.eventos = []
         self.passo = 0
+        self.ao_evento = ao_evento   # gancho opcional (demonstração); não altera o log
 
     def evento(self, tipo, cena=None, fala=None, resposta=None, **dados):
         assert tipo in TIPOS, tipo
@@ -39,6 +40,8 @@ class Registrador:
             "origem": self.meta["origem"],
             "modelo": self.meta["modelo"],
         })
+        if self.ao_evento:
+            self.ao_evento(self.eventos[-1])
 
     def salvar(self, estado_final):
         arq = self.pasta / f"{self.meta['execucao_id']}.json"

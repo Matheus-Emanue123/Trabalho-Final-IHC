@@ -1,5 +1,5 @@
 {
-  "versao": "roteiro-0.2",
+  "versao": "roteiro-0.3",
   "data_congelamento": "2026-11-19",
   "nota": "Conteúdo exibido na tela (signos estáticos e dinâmicos). Não contém chave de sucesso. Os campos 'figura' e 'superficial' são propriedades do item lidas apenas pelo controlador de mecanismos; nunca entram na observação o_t.",
   "tarefas": {
@@ -24,7 +24,7 @@
     "C2": {
       "conjunto": "calibracao",
       "titulo": "Rascunho de IHC",
-      "cartao": "Descubra o que deve ser entregue no rascunho e até quando. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.",
+      "cartao": "Descubra o que o rascunho precisa conter para a avaliação e até quando ele deve ser entregue. Preencha Entrega e Prazo. Quando estiverem como você quer, encerre.",
       "campos": ["Entrega", "Prazo"],
       "distratores": 2,
       "blocos": [

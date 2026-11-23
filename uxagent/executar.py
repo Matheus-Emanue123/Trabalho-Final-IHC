@@ -28,7 +28,7 @@ def hash_prompt():
 
 
 def executar_sessao(tarefa_id, condicao, semente, agente, theta, pasta, permitir_validacao=False,
-                    origem="sintetica", verbose=False):
+                    origem="sintetica", verbose=False, ao_evento=None):
     item = carregar_tarefa(tarefa_id, permitir_validacao)
     estado = EstadoInterface(item, theta["limite_acoes"], theta["alerta_acoes_restantes"])
     ctrl = Controlador(theta, item, condicao, semente)
@@ -39,7 +39,7 @@ def executar_sessao(tarefa_id, condicao, semente, agente, theta, pasta, permitir
             "origem": origem, "modelo": agente.nome, "versao_theta": theta["versao"],
             "versao_roteiro": item["versao_roteiro"], "hash_prompt": hash_prompt(),
             "prompt_sistema": PROMPT_SISTEMA, "instrucao_protocolo": INSTRUCAO_PROTOCOLO}
-    log = Registrador(meta, pasta)
+    log = Registrador(meta, pasta, ao_evento)
     log.evento("sessao_iniciada", cena=estado.cena, resposta="d_mostra_cartao",
                amostra=ctrl.amostra.como_dict(), filtro_leitura=ctrl.filtro)
     memoria, invalidas, tempo_total = [], 0, 0.0

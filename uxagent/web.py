@@ -32,7 +32,7 @@ h1{font-size:18px;margin:0 0 10px} h2{font-size:14px;color:var(--muted);margin:1
 button{font:inherit;padding:7px 12px;margin:3px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 button.pri{background:var(--acc);color:#fff;border-color:var(--acc)} input{font:inherit;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:60%}
 .alerta{color:var(--warn);font-weight:600} pre{white-space:pre-wrap;font-size:12.5px;background:var(--bg);padding:10px;border-radius:6px;border:1px solid var(--line)}
-.campo{margin:6px 0} label{display:inline-block;width:80px;font-weight:600}
+.dicas{font-size:13px;color:var(--muted);margin:4px 0 0 4px;padding-left:16px} .campo{margin:6px 0} label{display:inline-block;width:80px;font-weight:600}
 a{color:var(--acc)} table{border-collapse:collapse;width:100%;font-size:14px} td,th{border-bottom:1px solid var(--line);padding:5px 8px;text-align:left}
 .ok{color:#2e8b57;font-weight:600} .no{color:#c0392b;font-weight:600} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
 """
@@ -44,13 +44,26 @@ def pagina(titulo, corpo):
             f"</head><body>{corpo}</body></html>").encode("utf-8")
 
 
+def botao(f):
+    d = molic.FALAS_U[f]
+    return (f"<button name='fala' value='{f}' title='{html.escape(d['descricao'])}'>"
+            f"{html.escape(d['rotulo'])}</button>")
+
+
+def dicas(falas):
+    """Camada 1 da ajuda: descrição de cada botão visível, igual à que o agente recebe."""
+    itens = "".join(f"<li><b>{html.escape(molic.FALAS_U[f]['rotulo'])}</b>: {html.escape(molic.FALAS_U[f]['descricao'])}</li>"
+                    for f in falas)
+    return f"<ul class='dicas'>{itens}</ul>"
+
+
 def render_tela(estado):
     t = estado.tela()
     e = html.escape
     h = [f"<h1>{e(t['titulo'])}</h1>", f"<div class='box'><b>Cartão da tarefa:</b> {e(t['cartao'])}</div>"]
     if t["cena"] == molic.AJUDA:
         h.append(f"<div class='box'><b>Ajuda</b><p>{e(t['texto_ajuda'])}</p>"
-                 "<form method='post' action='/acao'><button name='fala' value='voltar'>Voltar ao chat</button></form></div>")
+                 "<form method='post' action='/acao'>" + botao("voltar") + "</form>" + dicas(["voltar"]) + "</div>")
     h.append("<h2>Histórico</h2>")
     for m in t["historico"]:
         cls = "msg" if m["autor"] == "chat" else "msg sis"
@@ -65,15 +78,16 @@ def render_tela(estado):
         for c, v in t["campos"].items():
             h.append(f"<form class='campo' method='post' action='/acao'><label>{e(c)}</label>"
                      f"<input name='texto' value='{e(v)}' aria-label='{e(c)}'><input type='hidden' name='campo' value='{e(c)}'>"
-                     "<button class='pri' name='fala' value='enviar'>Enviar</button></form>")
+                     "<button class='pri' name='fala' value='enviar' title='"
+                     f"{e(molic.FALAS_U['enviar']['descricao'])}'>Enviar</button></form>")
         h.append("<form method='post' action='/acao'>")
         for f in falas:
             if f != "enviar":
-                h.append(f"<button name='fala' value='{f}'>{e(molic.FALAS_U[f]['rotulo'])}</button>")
+                h.append(botao(f))
         h.append("</form>")
+        h.append(dicas(falas))
     elif t["cena"] == molic.CONFIRMACAO:
-        h.append("<form method='post' action='/acao'>" + "".join(
-            f"<button name='fala' value='{f}'>{e(molic.FALAS_U[f]['rotulo'])}</button>" for f in falas) + "</form>")
+        h.append("<form method='post' action='/acao'>" + "".join(botao(f) for f in falas) + "</form>" + dicas(falas))
     cls = "alerta" if t["alerta_acoes"] else "sis"
     h.append(f"<p class='{cls}'>Ações restantes: {t['acoes_restantes']} de 12</p>")
     if t["status"] != "em_andamento":
